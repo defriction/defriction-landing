@@ -1,0 +1,63 @@
+---
+import { ui } from '../i18n/ui';
+const { lang = 'en' } = Astro.props;
+const t = ui[lang as keyof typeof ui].services;
+---
+<section class="py-24 bg-background-soft dark:bg-background-dark border-y border-[#e7eff3] dark:border-gray-800" id="services">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-text-main dark:text-white mb-4">{t.title}</h2>
+            <p class="text-text-muted dark:text-gray-400 max-w-2xl text-lg">{t.subtitle}</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(180px,auto)]">
+            <!-- Large Card - N8N -->
+            <div class="md:col-span-2 bg-white dark:bg-surface-dark rounded-xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <span class="material-symbols-outlined text-9xl text-primary">account_tree</span>
+                </div>
+                <div class="relative z-10">
+                    <div class="size-12 rounded-lg bg-blue-50 dark:bg-blue-900/30 text-blue-500 flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-2xl">account_tree</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-main dark:text-white mb-2">{t.n8nTitle}</h3>
+                    <p class="text-text-muted dark:text-gray-400 max-w-sm">
+                        {t.n8nDesc}
+                    </p>
+                </div>
+            </div>
+            <!-- Medium Card - Lovable -->
+            <div class="bg-gradient-to-br from-[#fdfbf7] to-white dark:from-surface-dark dark:to-gray-800 rounded-xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow relative group overflow-hidden">
+                <div class="absolute -bottom-4 -right-4 size-24 bg-accent-lavender/40 rounded-full blur-2xl group-hover:bg-accent-lavender/60 transition-colors"></div>
+                <div class="size-12 rounded-lg bg-pink-50 dark:bg-pink-900/30 text-pink-500 flex items-center justify-center mb-6">
+                    <span class="material-symbols-outlined text-2xl">auto_awesome</span>
+                </div>
+                <h3 class="text-xl font-bold text-text-main dark:text-white mb-2">{t.lovableTitle}</h3>
+                <p class="text-text-muted dark:text-gray-400 text-sm">
+                    {t.lovableDesc}
+                </p>
+            </div>
+            <!-- Medium Card - Integration -->
+            <div class="bg-white dark:bg-surface-dark rounded-xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
+                <div class="size-12 rounded-lg bg-green-50 dark:bg-green-900/30 text-green-500 flex items-center justify-center mb-6">
+                    <span class="material-symbols-outlined text-2xl">hub</span>
+                </div>
+                <h3 class="text-xl font-bold text-text-main dark:text-white mb-2">{t.integrationTitle}</h3>
+                <p class="text-text-muted dark:text-gray-400 text-sm">
+                    {t.integrationDesc}
+                </p>
+            </div>
+            <!-- Wide Card - Consult -->
+            <div class="md:col-span-2 bg-primary/5 dark:bg-primary/10 rounded-xl p-8 border border-primary/10 dark:border-primary/20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div>
+                    <h3 class="text-xl font-bold text-text-main dark:text-white mb-2">{t.consultTitle}</h3>
+                    <p class="text-text-muted dark:text-gray-400 max-w-md">
+                        {t.consultDesc}
+                    </p>
+                </div>
+                <button class="shrink-0 bg-white dark:bg-surface-dark text-primary font-bold py-3 px-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    {t.consultBtn}
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

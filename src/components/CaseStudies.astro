@@ -1,0 +1,46 @@
+---
+import { ui } from '../i18n/ui';
+const { lang = 'en' } = Astro.props;
+const t = ui[lang as keyof typeof ui].caseStudies;
+---
+<section class="py-24 bg-background-soft dark:bg-background-dark" id="case-studies">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+            <div>
+                <h2 class="text-3xl font-extrabold text-text-main dark:text-white mb-2">{t.title}</h2>
+                <p class="text-text-muted dark:text-gray-400">{t.subtitle}</p>
+            </div>
+            <a class="text-primary font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                {t.viewAll} <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Case Study 1 -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden rounded-xl mb-4 shadow-sm">
+                    <div class="h-64 w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Modern office desk with laptop displaying a dashboard" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMbeEhdkvhnSrVqv19bGxB593MoLonnJhU2srMNulye1gsonjvAiLuhZS7bSBbPZCbTBMxado6tyAnQ4YELDt1nYbSxM-CpvoHaF6ch5KWAFNh47jWzQS1_Cr6gdKVTpeGCSPHD7605nI_xZqCuJ0UnGytEwUkuxKCHld0tUnFbtaIEM-o3ZaMvCANGfdggB1KJZIGbhmJ76FGsNrN-prCl_dXVnwE60PR_TUH5RIvr4K3PzNXKh1umLk7LWmLqUd390XnhwJ1zFg');">
+                    </div>
+                </div>
+                <div class="flex gap-2 mb-2">
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-1 rounded">E-commerce</span>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-2 py-1 rounded">Automation</span>
+                </div>
+                <h3 class="text-xl font-bold text-text-main dark:text-white mb-1 group-hover:text-primary transition-colors">{t.cs1Title}</h3>
+                <p class="text-text-muted dark:text-gray-400 text-sm">{t.cs1Desc}</p>
+            </div>
+            <!-- Case Study 2 -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden rounded-xl mb-4 shadow-sm">
+                    <div class="h-64 w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Team looking at analytics on a tablet in a meeting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA6UOJ1053Lnsc0gGSFuppQsJg2Bi3TmRM2lisX1iYZuq1lURzLBNZL3q3kdqpi_mrZCWVL-6z86dZSyWhdDAcuHYKpqxZBxT_ErsVZRYhToayK3b2upV5dmXFUZUvWbyEqLSKRQMW11T9pG41QqPettVAedjUyUHjYizbRbOwIIryrUGHFsyyFh1WxCdANUB1s2t9kHZScIitKwBPRjeokZKjVjp9wE2zMf_nInSj4RcEPfFUnSARK_m807BI4aTtLeqjV4M4PO6s');">
+                    </div>
+                </div>
+                <div class="flex gap-2 mb-2">
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-green-600 bg-green-50 px-2 py-1 rounded">Agency</span>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-pink-600 bg-pink-50 px-2 py-1 rounded">CRM</span>
+                </div>
+                <h3 class="text-xl font-bold text-text-main dark:text-white mb-1 group-hover:text-primary transition-colors">{t.cs2Title}</h3>
+                <p class="text-text-muted dark:text-gray-400 text-sm">{t.cs2Desc}</p>
+            </div>
+        </div>
+    </div>
+</section>
