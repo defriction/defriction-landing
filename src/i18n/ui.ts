@@ -4,7 +4,7 @@ export const ui = {
     hero: {
       badge: 'Accepting new clients for Q4',
       titleStart: 'Turn Chaos into',
-      titleHighlight: 'Autopilot',
+      titleHighlight: 'defriction',
       subtitle: 'We build scalable digital products and automated workflows using N8N and Lovable, so you can focus on growing, not grinding.',
       ctaStart: 'Start Automating',
       ctaView: 'View Work',
@@ -70,7 +70,7 @@ export const ui = {
     hero: {
       badge: 'Aceptando nuevos clientes Q4',
       titleStart: 'Convierte el Caos en',
-      titleHighlight: 'Piloto Automático',
+      titleHighlight: 'defriction',
       subtitle: 'Creamos productos digitales escalables y flujos de trabajo automatizados con N8N y Lovable, para que te enfoques en crecer, no en tareas repetitivas.',
       ctaStart: 'Automatizar Ahora',
       ctaView: 'Ver Trabajos',
