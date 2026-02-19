@@ -1,6 +1,6 @@
 export const ui = {
   en: {
-    nav: { services: 'Services', process: 'Process', caseStudies: 'Case Studies', book: 'Book Discovery' },
+    nav: { services: 'Services', process: 'Process', products: 'Products', caseStudies: 'Case Studies', book: 'Book Discovery' },
     hero: {
       badge: 'Accepting new clients for Q4',
       titleStart: 'Turn Chaos into',
@@ -19,6 +19,10 @@ export const ui = {
       lovableDesc: 'AI-generated interfaces that turn your raw data into functional, beautiful internal tools and customer-facing apps instantly.',
       integrationTitle: 'System Integration',
       integrationDesc: 'Seamlessly connecting your favorite tools like Airtable, Slack, Gmail, and Stripe into a unified ecosystem.',
+      pythonTitle: 'Python & CI/CD',
+      pythonDesc: 'Advanced backend automation using Python scripts and CI/CD pipelines for robust, error-free deployments.',
+      chatBotsTitle: 'AI Chatbots',
+      chatBotsDesc: 'Intelligent WhatsApp & Telegram agents powered by LLMs to automate customer support and sales 24/7.',
       consultTitle: 'Need a custom strategy?',
       consultDesc: 'Not sure where to start? We audit your current manual processes and identify high-impact automation opportunities.',
       consultBtn: 'Get a Free Audit'
@@ -46,12 +50,24 @@ export const ui = {
     },
     caseStudies: {
       title: 'Recent Transformations',
-      subtitle: 'See how businesses are scaling with AutoCreate.',
+      subtitle: 'See how businesses are scaling with defriction.',
       viewAll: 'View all case studies',
       cs1Title: 'Automating Order Processing for Retail Brand',
       cs1Desc: 'Reduced manual data entry by 95% using N8N and Shopify integration.',
       cs2Title: 'Custom CRM & Client Portal',
       cs2Desc: 'Built a fully custom client portal using Airtable and Softr in 2 weeks.'
+    },
+    products: {
+      title: 'Star Products',
+      subtitle: 'Ready-to-use automation tools to streamline your daily operations.',
+      financeTitle: 'Finance Tracker Bot',
+      financeDesc: 'Keep your finances in check effortlessly. Log expenses and income directly through Telegram.',
+      inventoryTitle: 'Smart Inventory Bot',
+      inventoryDesc: 'Real-time inventory management. Track stock levels and movements with simple chat commands.',
+      cta: 'Start Bot',
+      comingSoonTitle: 'Coming Soon',
+      comingSoonDesc: 'New innovative projects are currently in development. Stay tuned for more automation tools.',
+      comingSoonBtn: 'In Development'
     },
     footerCTA: {
       title: 'Ready to reclaim your time?',
@@ -66,7 +82,7 @@ export const ui = {
     }
   },
   es: {
-    nav: { services: 'Servicios', process: 'Proceso', caseStudies: 'Casos de Éxito', book: 'Agendar Cita' },
+    nav: { services: 'Servicios', process: 'Proceso', products: 'Productos', caseStudies: 'Casos de Éxito', book: 'Agendar Cita' },
     hero: {
       badge: 'Aceptando nuevos clientes Q4',
       titleStart: 'Convierte el Caos en',
@@ -85,6 +101,10 @@ export const ui = {
       lovableDesc: 'Interfaces generadas por IA que convierten tus datos brutos en herramientas internas funcionales y hermosas y aplicaciones para clientes al instante.',
       integrationTitle: 'Integración de Sistemas',
       integrationDesc: 'Conectando sin problemas tus herramientas favoritas como Airtable, Slack, Gmail y Stripe en un ecosistema unificado.',
+      pythonTitle: 'Python y CI/CD',
+      pythonDesc: 'Automatización backend avanzada usando scripts de Python y pipelines CI/CD para despliegues robustos.',
+      chatBotsTitle: 'Chatbots con IA',
+      chatBotsDesc: 'Agentes inteligentes en WhatsApp y Telegram potenciados por LLMs para automatizar soporte y ventas 24/7.',
       consultTitle: '¿Necesitas una estrategia personalizada?',
       consultDesc: '¿No sabes por dónde empezar? Auditamos tus procesos manuales actuales e identificamos oportunidades de automatización de alto impacto.',
       consultBtn: 'Obtén una Auditoría Gratis'
@@ -112,12 +132,24 @@ export const ui = {
     },
     caseStudies: {
       title: 'Transformaciones Recientes',
-      subtitle: 'Mira cómo las empresas están escalando con AutoCreate.',
+      subtitle: 'Mira cómo las empresas están escalando con defriction.',
       viewAll: 'Ver todos los casos',
       cs1Title: 'Automatización de Pedidos para Marca Retail',
       cs1Desc: 'Reducción de entrada de datos manual en un 95% usando N8N e integración con Shopify.',
       cs2Title: 'CRM Personalizado y Portal de Clientes',
       cs2Desc: 'Construcción de un portal de clientes totalmente personalizado usando Airtable y Softr en 2 semanas.'
+    },
+    products: {
+      title: 'Productos Disponibles',
+      subtitle: 'Herramientas de automatización listas para usar que optimizan tus operaciones diarias.',
+      financeTitle: 'Bot de Finanzas',
+      financeDesc: 'Mantén tus finanzas bajo control sin esfuerzo. Registra gastos e ingresos directamente por Telegram.',
+      inventoryTitle: 'Bot de Inventario Smart',
+      inventoryDesc: 'Gestión de inventario en tiempo real. Rastrea niveles de stock y movimientos con comandos de chat simples.',
+      cta: 'Iniciar Bot',
+      comingSoonTitle: 'Próximamente',
+      comingSoonDesc: 'Nuevos proyectos innovadores están en desarrollo. Espera más herramientas de automatización pronto.',
+      comingSoonBtn: 'En Desarrollo'
     },
     footerCTA: {
       title: '¿Listo para recuperar tu tiempo?',

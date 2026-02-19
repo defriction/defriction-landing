@@ -26,14 +26,34 @@ const t = ui[lang as keyof typeof ui].services;
                 </div>
             </div>
             <!-- Medium Card - Lovable -->
-            <div class="bg-gradient-to-br from-[#fdfbf7] to-white dark:from-surface-dark dark:to-gray-800 rounded-xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow relative group overflow-hidden">
-                <div class="absolute -bottom-4 -right-4 size-24 bg-accent-lavender/40 rounded-full blur-2xl group-hover:bg-accent-lavender/60 transition-colors"></div>
-                <div class="size-12 rounded-lg bg-pink-50 dark:bg-pink-900/30 text-pink-500 flex items-center justify-center mb-6">
+            <div class="bg-gradient-to-br from-[#fdfbf7] to-white dark:from-surface-dark dark:to-gray-800 rounded-xl p-8 border border-accent/20 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow relative group overflow-hidden">
+                <div class="absolute -bottom-4 -right-4 size-24 bg-accent/30 rounded-full blur-2xl group-hover:bg-accent/50 transition-colors"></div>
+                <div class="size-12 rounded-lg bg-accent/10 dark:bg-accent/20 text-accent flex items-center justify-center mb-6">
                     <span class="material-symbols-outlined text-2xl">auto_awesome</span>
                 </div>
                 <h3 class="text-xl font-bold text-text-main dark:text-white mb-2">{t.lovableTitle}</h3>
                 <p class="text-text-muted dark:text-gray-400 text-sm">
                     {t.lovableDesc}
+                </p>
+            </div>
+            <!-- Medium Card - AI Chatbots -->
+            <div class="bg-white dark:bg-surface-dark rounded-xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
+                <div class="size-12 rounded-lg bg-purple-50 dark:bg-purple-900/30 text-purple-500 flex items-center justify-center mb-6">
+                    <span class="material-symbols-outlined text-2xl">smart_toy</span>
+                </div>
+                <h3 class="text-xl font-bold text-text-main dark:text-white mb-2">{t.chatBotsTitle}</h3>
+                <p class="text-text-muted dark:text-gray-400 text-sm">
+                    {t.chatBotsDesc}
+                </p>
+            </div>
+            <!-- Medium Card - Python & CI/CD -->
+            <div class="bg-white dark:bg-surface-dark rounded-xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
+                <div class="size-12 rounded-lg bg-yellow-50 dark:bg-yellow-900/30 text-yellow-600 flex items-center justify-center mb-6">
+                    <span class="material-symbols-outlined text-2xl">terminal</span>
+                </div>
+                <h3 class="text-xl font-bold text-text-main dark:text-white mb-2">{t.pythonTitle}</h3>
+                <p class="text-text-muted dark:text-gray-400 text-sm">
+                    {t.pythonDesc}
                 </p>
             </div>
             <!-- Medium Card - Integration -->
@@ -47,7 +67,7 @@ const t = ui[lang as keyof typeof ui].services;
                 </p>
             </div>
             <!-- Wide Card - Consult -->
-            <div class="md:col-span-2 bg-primary/5 dark:bg-primary/10 rounded-xl p-8 border border-primary/10 dark:border-primary/20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div class="md:col-span-3 bg-primary/5 dark:bg-primary/10 rounded-xl p-8 border border-primary/10 dark:border-primary/20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                 <div>
                     <h3 class="text-xl font-bold text-text-main dark:text-white mb-2">{t.consultTitle}</h3>
                     <p class="text-text-muted dark:text-gray-400 max-w-md">

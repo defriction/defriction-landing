@@ -12,14 +12,15 @@ const t = ui[lang as keyof typeof ui].nav;
                 <span class="text-xl font-bold tracking-tight text-text-main dark:text-white">defriction</span>
             </div>
             <!-- Desktop Links -->
-            <div class="hidden md:flex items-center gap-8">
+            <div class="hidden md:flex items-center gap-8 ml-auto mr-8">
                 <a class="text-sm font-medium text-text-muted hover:text-primary transition-colors" href="#services">{t.services}</a>
                 <a class="text-sm font-medium text-text-muted hover:text-primary transition-colors" href="#process">{t.process}</a>
+                <a class="text-sm font-medium text-text-muted hover:text-primary transition-colors" href="#products">{t.products}</a>
                 <a class="text-sm font-medium text-text-muted hover:text-primary transition-colors" href="#case-studies">{t.caseStudies}</a>
             </div>
             <!-- CTA -->
-            <div class="flex items-center gap-4">
-                <a href={lang === 'es' ? '/es' : '/'} class="text-sm font-bold text-text-muted hover:text-primary transition-colors">
+            <div class="hidden md:flex items-center gap-4">
+                <a href={lang === 'es' ? '/' : '/es'} class="text-sm font-bold text-text-muted hover:text-primary transition-colors">
                     {lang === 'es' ? 'EN' : 'ES'}
                 </a>
                 <button class="bg-primary hover:bg-primary-dark text-white text-sm font-bold py-2.5 px-6 rounded-lg transition-all shadow-lg hover:shadow-primary/30 flex items-center gap-2 group">
@@ -27,6 +28,51 @@ const t = ui[lang as keyof typeof ui].nav;
                     <span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
                 </button>
             </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-text-main hover:text-primary transition-colors" aria-label="Menu">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-surface-dark border-b border-gray-100 dark:border-gray-700 absolute w-full left-0 top-20 shadow-xl">
+        <div class="px-4 py-6 flex flex-col gap-4">
+            <a class="text-base font-medium text-text-main dark:text-white hover:text-primary py-2" href="#services">{t.services}</a>
+            <a class="text-base font-medium text-text-main dark:text-white hover:text-primary py-2" href="#process">{t.process}</a>
+            <a class="text-base font-medium text-text-main dark:text-white hover:text-primary py-2" href="#products">{t.products}</a>
+            <a class="text-base font-medium text-text-main dark:text-white hover:text-primary py-2" href="#case-studies">{t.caseStudies}</a>
+            <hr class="border-gray-100 dark:border-gray-700 my-2"/>
+            <div class="flex items-center justify-between">
+                <a href={lang === 'es' ? '/' : '/es'} class="text-base font-bold text-text-muted hover:text-primary transition-colors">
+                    {lang === 'es' ? 'Switch to English' : 'Cambiar a Español'}
+                </a>
+            </div>
+            <button class="w-full bg-primary hover:bg-primary-dark text-white text-base font-bold py-3 px-6 rounded-lg transition-all shadow-md flex items-center justify-center gap-2 mt-2">
+                <span>{t.book}</span>
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
         </div>
     </div>
 </nav>
+
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn?.addEventListener('click', () => {
+        menu?.classList.toggle('hidden');
+        const icon = btn.querySelector('span');
+        if (icon) {
+            icon.textContent = menu?.classList.contains('hidden') ? 'menu' : 'close';
+        }
+    });
+
+    // Close menu when clicking a link
+    menu?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.add('hidden');
+            const icon = btn?.querySelector('span');
+            if (icon) icon.textContent = 'menu';
+        });
+    });
+</script>
