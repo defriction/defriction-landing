@@ -69,6 +69,30 @@ export const ui = {
       comingSoonDesc: 'New innovative projects are currently in development. Stay tuned for more automation tools.',
       comingSoonBtn: 'In Development'
     },
+    testimonials: {
+      title: 'Trusted by Innovators',
+      subtitle: 'Here is what our partners say about working with defriction.',
+      t1Quote: "The inventory bot completely changed how we handle stock. We went from 3 hours of manual counting to instant updates.",
+      t1Author: "Carlos M.",
+      t1Role: "Operations Manager, RetailCo",
+      t2Quote: "I was skeptical about no-code, but the custom CRM they built is faster and easier to use than Salesforce.",
+      t2Author: "Sarah J.",
+      t2Role: "CEO, TechStart",
+      t3Quote: "The ROI was immediate. The finance bot paid for itself in the first week by catching missed expenses.",
+      t3Author: "David L.",
+      t3Role: "Freelance Consultant"
+    },
+    faq: {
+      title: 'Frequently Asked Questions',
+      q1: 'How long does a typical project take?',
+      a1: 'Timelines depend on complexity. <br><br><strong>• Quick Wins (3-5 days):</strong> Simple notification bots or data entry automations.<br><strong>• Standard Integrations (2-3 weeks):</strong> Connecting CRMs, Marketing tools, and custom dashboards.<br><strong>• Enterprise Systems (4+ weeks):</strong> Full operational workflows.<br><br>We start with a Discovery Call to give you an exact roadmap.',
+      q2: 'Do I need technical knowledge to manage the bots?',
+      a2: '<strong>Zero technical skills required.</strong> We design our tools to feel like apps you already use. You will interact with them via simple buttons in Telegram, WhatsApp, or clean web dashboards. We handle the code; you handle the business. Plus, we provide personalized video walkthroughs for your team.',
+      q3: 'Is my data secure?',
+      a3: 'Security is our top priority. We use industry-standard encryption for all data in transit. Unlike generic SaaS tools, we often build on <strong>self-hosted infrastructure (like N8N)</strong>, meaning your data stays on your private servers or cloud, not ours. We also sign NDAs before starting any project.',
+      q4: 'Do you offer ongoing support?',
+      a4: 'Absolutely. Software evolves, and APIs change. We offer <strong>"Peace of Mind" maintenance packages</strong> that cover API updates, server monitoring, and bug fixes. We also offer retainer models for continuous improvement, so your automations grow alongside your business.'
+    },
     footerCTA: {
       title: 'Ready to reclaim your time?',
       subtitle: 'Stop doing the robot\'s work. Let\'s build a system that works for you, 24/7.',
@@ -150,6 +174,30 @@ export const ui = {
       comingSoonTitle: 'Próximamente',
       comingSoonDesc: 'Nuevos proyectos innovadores están en desarrollo. Espera más herramientas de automatización pronto.',
       comingSoonBtn: 'En Desarrollo'
+    },
+    testimonials: {
+      title: 'Confían en Nosotros',
+      subtitle: 'Esto es lo que dicen nuestros socios sobre trabajar con defriction.',
+      t1Quote: "El bot de inventario cambió por completo cómo manejamos el stock. Pasamos de 3 horas de conteo manual a actualizaciones instantáneas.",
+      t1Author: "Carlos M.",
+      t1Role: "Gerente de Operaciones, RetailCo",
+      t2Quote: "Era escéptica sobre el no-code, pero el CRM personalizado que construyeron es más rápido y fácil de usar que Salesforce.",
+      t2Author: "Sarah J.",
+      t2Role: "CEO, TechStart",
+      t3Quote: "El ROI fue inmediato. El bot de finanzas se pagó solo en la primera semana al detectar gastos no registrados.",
+      t3Author: "David L.",
+      t3Role: "Consultor Freelance"
+    },
+    faq: {
+      title: 'Preguntas Frecuentes',
+      q1: '¿Cuánto tiempo toma un proyecto típico?',
+      a1: 'El tiempo varía según el alcance.<br><br><strong>• Proyectos Rápidos (3-5 días):</strong> Bots de notificación o automatizaciones simples.<br><strong>• Integraciones (2-3 semanas):</strong> Conexión de CRM, dashboards y herramientas de marketing.<br><strong>• Sistemas a Medida (4+ semanas):</strong> Flujos operativos complejos.<br><br>Siempre iniciamos con una llamada de descubrimiento para darte una hoja de ruta exacta.',
+      q2: '¿Necesito conocimientos técnicos para manejar los bots?',
+      a2: '<strong>No necesitas saber programar.</strong> Diseñamos soluciones que se sienten como las apps que usas a diario (WhatsApp, Telegram, Web). Nosotros nos encargamos de la lógica compleja y te entregamos una interfaz limpia. Además, incluimos videos de capacitación personalizados y soporte post-lanzamiento.',
+      q3: '¿Mis datos están seguros?',
+      a3: 'Sí, la seguridad es nuestra prioridad. Utilizamos conexiones encriptadas para todos los datos. A diferencia de las herramientas SaaS genéricas, preferimos implementar soluciones <strong>auto-alojadas (como N8N)</strong> en tu propia infraestructura, lo que garantiza que tú mantienes la propiedad y control total de tus datos sensibles.',
+      q4: '¿Ofrecen soporte continuo?',
+      a4: 'Sí. El software evoluciona y las APIs cambian. Ofrecemos <strong>planes de mantenimiento mensual</strong> para asegurar que tus bots sigan funcionando 24/7, gestionar actualizaciones de seguridad y realizar pequeñas mejoras. Así, tu sistema crece al mismo ritmo que tu negocio.'
     },
     footerCTA: {
       title: '¿Listo para recuperar tu tiempo?',
