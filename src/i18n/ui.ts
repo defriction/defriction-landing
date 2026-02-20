@@ -77,7 +77,7 @@ export const ui = {
       t1Role: "Operations Manager, RetailCo",
       t2Quote: "I was skeptical about no-code, but the custom CRM they built is faster and easier to use than Salesforce.",
       t2Author: "Sarah J.",
-      t2Role: "CEO, TechStart",
+      t2Role: "Freelance",
       t3Quote: "The ROI was immediate. The finance bot paid for itself in the first week by catching missed expenses.",
       t3Author: "David L.",
       t3Role: "Freelance Consultant"
@@ -111,7 +111,7 @@ export const ui = {
       badge: 'Aceptando nuevos clientes Q4',
       titleStart: 'Convierte el Caos en',
       titleHighlight: 'defriction',
-      subtitle: 'Creamos productos digitales escalables y flujos de trabajo automatizados con N8N y Lovable, para que te enfoques en crecer, no en tareas repetitivas.',
+      subtitle: 'Diseñamos infraestructura digital escalable para problemas complejos. Desde gestión deportiva autónoma hasta orquestación de flujos con Python y n8n',
       ctaStart: 'Automatizar Ahora',
       ctaView: 'Ver Trabajos',
       trust: 'Potenciando herramientas que amas'
