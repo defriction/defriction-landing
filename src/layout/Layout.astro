@@ -1,85 +1,62 @@
 ---
 interface Props {
 	title: string;
+	description?: string;
 	lang?: string;
 }
 
-const { title, lang = 'en' } = Astro.props;
+const { title, description = '', lang = 'en' } = Astro.props;
+
+// Canonical + hreflang URLs. The English site lives at `/`, the Spanish at `/es`.
+const site = Astro.site ?? new URL('https://defriction.com');
+const enUrl = new URL('/', site).href;
+const esUrl = new URL('/es', site).href;
+const canonical = lang === 'es' ? esUrl : enUrl;
+const ogImage = new URL('/image.png', site).href;
+
+import '../styles/global.css';
 ---
 
 <!DOCTYPE html>
-<html class="light" lang={lang}>
+<html lang={lang}>
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Set theme before paint to avoid a flash of the wrong color scheme. -->
+    <script is:inline>
+        (() => {
+            const stored = localStorage.getItem('theme');
+            const dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.classList.toggle('dark', dark);
+        })();
+    </script>
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <!-- Localized alternates -->
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="es" href={esUrl} />
+    <link rel="alternate" hreflang="x-default" href={enUrl} />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="defriction" />
+    <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
     <!-- Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <!-- Tailwind CSS -->
-    <script is:inline src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <!-- Tailwind Config -->
-    <script is:inline id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#00A896",
-                        "primary-dark": "#008c7a",
-                        "accent": "#FF7F50",
-                        "accent-dark": "#ff6633",
-                        "background-light": "#F7F9FB",
-                        "background-soft": "#f7f9fb",
-                        "background-dark": "#111c21",
-                        "surface-light": "#ffffff",
-                        "surface-dark": "#1e293b",
-                        "text-main": "#2D3436",
-                        "text-muted": "#6c7d82",
-                    },
-                    fontFamily: {
-                        "display": ["Manrope", "sans-serif"]
-                    },
-                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "full": "9999px"},
-                    boxShadow: {
-                        "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
-                        "glow": "0 0 40px -10px rgba(71, 180, 235, 0.2)",
-                    }
-                },
-            },
-        }
-    </script>
-    <style is:global>
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
-        .blob-bg {
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(230,230,250,0.6) 0%, rgba(255,255,255,0) 70%);
-            border-radius: 50%;
-            z-index: 0;
-            pointer-events: none;
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        @keyframes moveDown {
-            0% { top: -50%; opacity: 0; }
-            50% { opacity: 1; }
-            100% { top: 100%; opacity: 0; }
-        }
-    </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white font-display overflow-x-hidden antialiased">
     <slot />

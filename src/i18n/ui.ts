@@ -1,5 +1,9 @@
 export const ui = {
   en: {
+    meta: {
+      title: 'defriction — Digital Automation & Workflow Engineering',
+      description: 'We build scalable digital products and automated workflows with N8N, Python and Lovable, so you can focus on growing, not grinding.'
+    },
     nav: { services: 'Services', process: 'Process', products: 'Products', caseStudies: 'Case Studies', book: 'Book Discovery' },
     hero: {
       badge: 'Accepting new clients for Q4',
@@ -106,6 +110,10 @@ export const ui = {
     }
   },
   es: {
+    meta: {
+      title: 'defriction — Automatización Digital e Ingeniería de Flujos',
+      description: 'Diseñamos infraestructura digital escalable y flujos automatizados con n8n, Python y Lovable, para que te enfoques en crecer, no en operar.'
+    },
     nav: { services: 'Servicios', process: 'Proceso', products: 'Productos', caseStudies: 'Casos de Éxito', book: 'Agendar Cita' },
     hero: {
       badge: 'Aceptando nuevos clientes Q4',
@@ -183,7 +191,7 @@ export const ui = {
       t1Role: "Gerente de Operaciones, RetailCo",
       t2Quote: "Era escéptica sobre el no-code, pero el CRM personalizado que construyeron es más rápido y fácil de usar que Salesforce.",
       t2Author: "Sarah J.",
-      t2Role: "CEO, TechStart",
+      t2Role: "Freelance",
       t3Quote: "El ROI fue inmediato. El bot de finanzas se pagó solo en la primera semana al detectar gastos no registrados.",
       t3Author: "David L.",
       t3Role: "Consultor Freelance"

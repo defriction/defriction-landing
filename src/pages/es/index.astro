@@ -11,11 +11,13 @@ import Testimonials from '../../components/Testimonials.astro';
 import FAQ from '../../components/FAQ.astro';
 import FooterCTA from '../../components/FooterCTA.astro';
 import Footer from '../../components/Footer.astro';
+import { ui } from '../../i18n/ui';
 
-const lang = 'en';
+const lang = 'es';
+const t = ui[lang].meta;
 ---
 
-<Layout title="defriction - Automatización Digital" lang={lang}>
+<Layout title={t.title} description={t.description} lang={lang}>
     <Navbar lang={lang} />
     <Hero lang={lang} />
     <Products lang={lang} />
