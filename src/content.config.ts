@@ -27,6 +27,15 @@ const products = defineCollection({
       techNotes: z.array(bilingual).default([]),
       honestScope: z.array(bilingual).default([]),
       tags: z.array(z.string()).default([]),
+      // Optional per-product brand colors for the detail page. Falls back to the
+      // site theme when omitted, so each product can carry its own identity.
+      brand: z
+        .object({
+          color: z.string(),
+          colorDark: z.string(),
+          accent: z.string(),
+        })
+        .optional(),
       image: image(),
       gallery: z.array(image()).optional(),
       ctas: z.object({

@@ -4,8 +4,8 @@ featured: true
 status: live
 
 name:
-  en: Sinnet
-  es: Sinnet
+  en: Sinnet App
+  es: Sinnet App
 
 tagline:
   en: Tennis tournament management, end to end.
@@ -124,6 +124,12 @@ tags:
   - es-CO
   - Tenis
 
+# Sinnet's own brand colors (tennis green + blue accent), per defriction brand spec.
+brand:
+  color: "#2E7D32"
+  colorDark: "#1B5E20"
+  accent: "#1976D2"
+
 image: ../../assets/products/sinnet/hero.png
 gallery:
   - ../../assets/products/sinnet/01.png
@@ -131,8 +137,13 @@ gallery:
   - ../../assets/products/sinnet/03.png
   - ../../assets/products/sinnet/04.png
 
-# TODO: replace placeholders with the real demo / live-tournament URLs.
+# Contact is the only live channel today (no form/Calendly yet).
+# liveUrl: needs the production domain (devops) + a seeded permanent demo
+# tournament (backend). Pattern, served behind base href /tennis-admin/:
+#   https://<prod-domain>/tennis-admin/public-tournament-portal?tenantSlug=<slug>&tournamentId=<id>&tab=live
+# A finished tournament does NOT 404 — the portal shows a read-only "Finished" view,
+# so a demo link stays valid forever. Set liveUrl once those exist.
 ctas:
-  demoUrl: "mailto:defriction@defriction.org?subject=Sinnet%20demo"
+  demoUrl: "mailto:defriction@defriction.org?subject=Quiero%20unir%20mi%20academia%20a%20Sinnet%20App"
   liveUrl: "#"
-  contactUrl: "mailto:defriction@defriction.org"
+  contactUrl: "mailto:defriction@defriction.org?subject=Quiero%20unir%20mi%20academia%20a%20Sinnet%20App"

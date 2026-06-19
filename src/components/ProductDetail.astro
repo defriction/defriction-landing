@@ -12,6 +12,21 @@ const { product, lang } = Astro.props;
 const { data } = product;
 const t = ui[lang].products;
 
+// Per-product brand colors (fall back to the site theme tokens). Exposed as CSS
+// vars so this generic component renders in each product's own identity.
+const brand = data.brand ?? {
+  color: 'var(--color-primary)',
+  colorDark: 'var(--color-primary-dark)',
+  accent: 'var(--color-accent)',
+};
+const brandStyle = [
+  `--brand:${brand.color}`,
+  `--brand-dark:${brand.colorDark}`,
+  `--brand-accent:${brand.accent}`,
+  `--brand-soft:color-mix(in srgb, ${brand.color} 12%, transparent)`,
+  `--brand-accent-soft:color-mix(in srgb, ${brand.accent} 12%, transparent)`,
+].join(';');
+
 // Only render a CTA if its URL is a real link (placeholders use "#").
 const isLink = (url?: string) => !!url && url !== '#';
 const demoCtas = [
@@ -20,8 +35,8 @@ const demoCtas = [
 ].filter((c) => isLink(c.url));
 ---
 
-<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-  <a href={productsAnchor(lang)} class="inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-primary-dark mb-8">
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16" style={brandStyle}>
+  <a href={productsAnchor(lang)} class="inline-flex items-center gap-1 text-sm font-medium text-[var(--brand)] hover:text-[var(--brand-dark)] mb-8">
     <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_back</span>
     {t.backToProducts}
   </a>
@@ -29,7 +44,7 @@ const demoCtas = [
   <!-- Hero -->
   <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-20">
     <div class="relative order-1 lg:order-2">
-      <div class="absolute -inset-1 bg-gradient-to-r from-primary via-accent/40 to-primary/60 rounded-2xl blur opacity-30"></div>
+      <div class="absolute -inset-1 bg-gradient-to-r from-[var(--brand)] via-[var(--brand-accent)] to-[var(--brand)] rounded-2xl blur opacity-25"></div>
       <Image src={data.image} alt={data.name[lang]} widths={[600, 1000]} sizes="(min-width: 1024px) 50vw, 100vw"
         class="relative w-full rounded-2xl shadow-xl object-cover" />
     </div>
@@ -40,14 +55,14 @@ const demoCtas = [
       {data.tags.length > 0 && (
         <div class="flex flex-wrap gap-2 mb-8">
           {data.tags.map((tag) => (
-            <span class="text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full">{tag}</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-[var(--brand)] bg-[var(--brand-soft)] px-3 py-1 rounded-full">{tag}</span>
           ))}
         </div>
       )}
       {demoCtas.length > 0 && (
         <div class="flex flex-wrap gap-3">
           {demoCtas.map((cta) => (
-            <a href={cta.url} class:list={["inline-flex items-center justify-center px-6 py-3 text-base font-bold rounded-lg transition-all shadow-md hover:shadow-lg", cta.primary ? "bg-primary hover:bg-primary-dark text-white" : "bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-text-main dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"]}>
+            <a href={cta.url} class:list={["inline-flex items-center justify-center px-6 py-3 text-base font-bold rounded-lg transition-all shadow-md hover:shadow-lg", cta.primary ? "bg-[var(--brand)] hover:bg-[var(--brand-dark)] text-white" : "bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-text-main dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"]}>
               {cta.label}
             </a>
           ))}
@@ -69,7 +84,7 @@ const demoCtas = [
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {data.audiences.map((a) => (
           <div class="flex items-start gap-3 bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 rounded-xl p-5 shadow-sm">
-            <span class="material-symbols-outlined text-primary text-[22px] shrink-0" aria-hidden="true">group</span>
+            <span class="material-symbols-outlined text-[var(--brand)] text-[22px] shrink-0" aria-hidden="true">group</span>
             <p class="text-text-muted dark:text-gray-300">{a[lang]}</p>
           </div>
         ))}
@@ -84,7 +99,7 @@ const demoCtas = [
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {data.features.map((f) => (
           <div class="bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-            <div class="size-11 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4">
+            <div class="size-11 rounded-lg bg-[var(--brand-soft)] text-[var(--brand)] flex items-center justify-center mb-4">
               <span class="material-symbols-outlined" aria-hidden="true">{f.icon}</span>
             </div>
             <h3 class="text-lg font-bold text-text-main dark:text-white mb-2">{f.title[lang]}</h3>
@@ -102,7 +117,7 @@ const demoCtas = [
       <div class="flex flex-wrap gap-3">
         {data.supportFeatures.map((s) => (
           <span class="inline-flex items-center gap-2 bg-gray-50 dark:bg-gray-800 text-text-muted dark:text-gray-300 text-sm font-medium px-4 py-2 rounded-full">
-            <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check</span>
+            <span class="material-symbols-outlined text-[var(--brand)] text-[18px]" aria-hidden="true">check</span>
             {s[lang]}
           </span>
         ))}
@@ -117,7 +132,7 @@ const demoCtas = [
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
         {data.differentiators.map((d) => (
           <li class="flex items-start gap-3">
-            <span class="material-symbols-outlined text-primary text-[22px] shrink-0" aria-hidden="true">verified</span>
+            <span class="material-symbols-outlined text-[var(--brand)] text-[22px] shrink-0" aria-hidden="true">verified</span>
             <span class="text-text-muted dark:text-gray-300 leading-relaxed">{d[lang]}</span>
           </li>
         ))}
@@ -162,11 +177,11 @@ const demoCtas = [
 
   <!-- Final CTA -->
   {(isLink(data.ctas.demoUrl) || isLink(data.ctas.contactUrl)) && (
-    <section class="text-center bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/5 dark:to-accent/5 border border-primary/20 rounded-2xl px-6 py-12">
+    <section class="text-center bg-gradient-to-br from-[var(--brand-soft)] to-[var(--brand-accent-soft)] border border-[var(--brand-soft)] rounded-2xl px-6 py-12">
       <h2 class="text-2xl sm:text-3xl font-extrabold text-text-main dark:text-white mb-6">{t.finalCtaTitle}</h2>
       <div class="flex flex-wrap justify-center gap-3">
         {isLink(data.ctas.demoUrl) && (
-          <a href={data.ctas.demoUrl} class="inline-flex items-center justify-center px-8 py-3.5 text-base font-bold rounded-lg bg-primary hover:bg-primary-dark text-white transition-all shadow-md hover:shadow-lg">{t.requestDemo}</a>
+          <a href={data.ctas.demoUrl} class="inline-flex items-center justify-center px-8 py-3.5 text-base font-bold rounded-lg bg-[var(--brand)] hover:bg-[var(--brand-dark)] text-white transition-all shadow-md hover:shadow-lg">{t.requestDemo}</a>
         )}
         {isLink(data.ctas.contactUrl) && (
           <a href={data.ctas.contactUrl} class="inline-flex items-center justify-center px-8 py-3.5 text-base font-bold rounded-lg bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-text-main dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">{ui[lang].nav.book}</a>
