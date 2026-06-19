@@ -1,5 +1,5 @@
 ---
-import { ui } from '../i18n/ui';
+import { ui, BOOKING_URL } from '../i18n/ui';
 const { lang = 'en' } = Astro.props;
 const t = ui[lang as keyof typeof ui].services;
 ---
@@ -10,7 +10,7 @@ const t = ui[lang as keyof typeof ui].services;
             <p class="text-text-muted dark:text-gray-400 max-w-2xl text-lg">{t.subtitle}</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(180px,auto)]">
-            <!-- Large Card - N8N -->
+            <!-- Large Card - AI Automations -->
             <div class="md:col-span-2 bg-white dark:bg-surface-dark rounded-xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
                 <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                     <span class="material-symbols-outlined text-9xl text-primary">account_tree</span>
@@ -25,7 +25,7 @@ const t = ui[lang as keyof typeof ui].services;
                     </p>
                 </div>
             </div>
-            <!-- Medium Card - Lovable -->
+            <!-- Medium Card - Custom Apps -->
             <div class="bg-gradient-to-br from-[#fdfbf7] to-white dark:from-surface-dark dark:to-gray-800 rounded-xl p-8 border border-accent/20 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow relative group overflow-hidden">
                 <div class="absolute -bottom-4 -right-4 size-24 bg-accent/30 rounded-full blur-2xl group-hover:bg-accent/50 transition-colors"></div>
                 <div class="size-12 rounded-lg bg-accent/10 dark:bg-accent/20 text-accent flex items-center justify-center mb-6">
@@ -46,10 +46,10 @@ const t = ui[lang as keyof typeof ui].services;
                     {t.chatBotsDesc}
                 </p>
             </div>
-            <!-- Medium Card - Python & CI/CD -->
+            <!-- Medium Card - Process Diagnosis -->
             <div class="bg-white dark:bg-surface-dark rounded-xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
                 <div class="size-12 rounded-lg bg-yellow-50 dark:bg-yellow-900/30 text-yellow-600 flex items-center justify-center mb-6">
-                    <span class="material-symbols-outlined text-2xl">terminal</span>
+                    <span class="material-symbols-outlined text-2xl">troubleshoot</span>
                 </div>
                 <h3 class="text-xl font-bold text-text-main dark:text-white mb-2">{t.pythonTitle}</h3>
                 <p class="text-text-muted dark:text-gray-400 text-sm">
@@ -74,9 +74,10 @@ const t = ui[lang as keyof typeof ui].services;
                         {t.consultDesc}
                     </p>
                 </div>
-                <button class="shrink-0 bg-white dark:bg-surface-dark text-primary font-bold py-3 px-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer"
+                   class="shrink-0 bg-white dark:bg-surface-dark text-primary font-bold py-3 px-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors inline-flex items-center gap-2">
                     {t.consultBtn}
-                </button>
+                </a>
             </div>
         </div>
     </div>

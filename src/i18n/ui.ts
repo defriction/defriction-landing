@@ -8,31 +8,31 @@ export const ui = {
   en: {
     meta: {
       title: 'defriction — Automation & Digital Products That Scale',
-      description: 'We design automated workflows and custom digital products with n8n, Python and AI — so your team ships outcomes, not busywork.'
+      description: 'We automate repetitive work and connect the tools you already use — turning manual processes into automated flows, with AI where it counts.'
     },
     nav: { services: 'Services', process: 'Process', products: 'Products', caseStudies: 'Work', book: 'Book a Call' },
     hero: {
       badge: 'Now booking new clients for Q3 2026',
       titleStart: 'Turn Chaos into',
       titleHighlight: 'defriction',
-      subtitle: 'We design scalable digital products and automated workflows — from autonomous sports platforms to Python and n8n pipelines — so you can focus on growing, not grinding.',
+      subtitle: 'We automate your business\'s repetitive work: we diagnose your manual processes, turn them into automated flows, and supercharge the tools you already use — with AI where it truly counts. You focus on growing, not operating.',
       ctaStart: 'Start Automating',
       ctaView: 'See Our Work',
       trust: 'Powering tools you already love'
     },
     services: {
       title: 'What We Do',
-      subtitle: 'We pair no-code speed with real engineering to build systems that scale with your business — not against it.',
-      n8nTitle: 'n8n Workflows',
-      n8nDesc: 'Self-hosted automations that connect your apps end to end — webhooks, data transformation, and scheduled jobs running 24/7 without a single manual step.',
-      lovableTitle: 'Lovable Apps',
-      lovableDesc: 'AI-assisted interfaces that turn raw data into polished internal tools and customer-facing apps — shipped in days, not months.',
-      integrationTitle: 'System Integration',
-      integrationDesc: 'We unify your stack — Airtable, Slack, Gmail, Stripe and more — into one connected ecosystem that just works.',
-      pythonTitle: 'Python & CI/CD',
-      pythonDesc: 'Production-grade backend automation with Python and CI/CD pipelines for reliable, repeatable, error-free deployments.',
+      subtitle: 'We turn your manual, repetitive work into automations that save you hours — connecting and supercharging the tools you already use, with AI where it makes the difference.',
+      n8nTitle: 'AI Automations',
+      n8nDesc: 'We connect your apps and put the repetitive work on autopilot — data entry, alerts, reports and follow-ups — running 24/7 without you lifting a finger.',
+      lovableTitle: 'Custom Apps',
+      lovableDesc: 'We turn your data into clean, easy-to-use internal tools and customer apps — ready in days, not months.',
+      integrationTitle: 'Connect Your Tools',
+      integrationDesc: 'No need to replace what you already use. We unify your tools — Airtable, Slack, Gmail, Stripe, spreadsheets — into one flow that just works, and add AI where it helps.',
+      pythonTitle: 'Process Diagnosis',
+      pythonDesc: 'We look at how you work today, spot what\'s eating your time, and show you exactly what to automate first for the biggest impact.',
       chatBotsTitle: 'AI Chatbots',
-      chatBotsDesc: 'WhatsApp & Telegram agents powered by LLMs that handle support and sales conversations around the clock.',
+      chatBotsDesc: 'WhatsApp and Telegram agents that answer your customers and help you sell, around the clock, without your team watching the inbox.',
       consultTitle: 'Not sure where to start?',
       consultDesc: 'We audit your manual processes and map the highest-impact automation opportunities — before you commit to anything.',
       consultBtn: 'Get a Free Audit'
@@ -147,31 +147,31 @@ export const ui = {
   es: {
     meta: {
       title: 'defriction — Automatización y Productos Digitales que Escalan',
-      description: 'Diseñamos flujos automatizados y productos digitales a medida con n8n, Python e IA — para que tu equipo entregue resultados, no tareas repetitivas.'
+      description: 'Automatizamos el trabajo repetitivo y conectamos las herramientas que ya usas — convirtiendo procesos manuales en flujos automáticos, con IA donde suma.'
     },
     nav: { services: 'Servicios', process: 'Proceso', products: 'Productos', caseStudies: 'Trabajo', book: 'Agendar Llamada' },
     hero: {
       badge: 'Reservando nuevos clientes para Q3 2026',
       titleStart: 'Convierte el Caos en',
       titleHighlight: 'defriction',
-      subtitle: 'Diseñamos productos digitales escalables y flujos automatizados — desde plataformas deportivas autónomas hasta pipelines con Python y n8n — para que te enfoques en crecer, no en operar.',
+      subtitle: 'Automatizamos las tareas repetitivas de tu negocio: diagnosticamos tus procesos manuales, los convertimos en flujos automáticos y potenciamos las herramientas que ya usas — con IA donde de verdad suma. Tú te enfocas en crecer, no en operar.',
       ctaStart: 'Automatizar Ahora',
       ctaView: 'Ver Nuestro Trabajo',
       trust: 'Potenciando herramientas que ya usas'
     },
     services: {
       title: 'Qué Hacemos',
-      subtitle: 'Combinamos la velocidad del no-code con ingeniería real para construir sistemas que escalan con tu negocio, no en su contra.',
-      n8nTitle: 'Flujos n8n',
-      n8nDesc: 'Automatizaciones autoalojadas que conectan tus apps de extremo a extremo — webhooks, transformación de datos y tareas programadas funcionando 24/7 sin un solo paso manual.',
-      lovableTitle: 'Apps Lovable',
-      lovableDesc: 'Interfaces asistidas por IA que convierten tus datos en herramientas internas pulidas y apps para clientes — entregadas en días, no en meses.',
-      integrationTitle: 'Integración de Sistemas',
-      integrationDesc: 'Unificamos tu stack — Airtable, Slack, Gmail, Stripe y más — en un ecosistema conectado que simplemente funciona.',
-      pythonTitle: 'Python y CI/CD',
-      pythonDesc: 'Automatización backend de nivel producción con Python y pipelines CI/CD para despliegues confiables, repetibles y sin errores.',
+      subtitle: 'Convertimos tu trabajo manual y repetitivo en automatizaciones que te ahorran horas — conectando y potenciando las herramientas que ya usas, con IA cuando hace la diferencia.',
+      n8nTitle: 'Automatizaciones con IA',
+      n8nDesc: 'Conectamos tus apps y dejamos en piloto automático las tareas repetitivas — registros, avisos, reportes y seguimientos — corriendo 24/7 sin que muevas un dedo.',
+      lovableTitle: 'Apps a Medida',
+      lovableDesc: 'Convertimos tus datos en herramientas internas y apps para clientes, limpias y fáciles de usar — listas en días, no en meses.',
+      integrationTitle: 'Conecta tus Herramientas',
+      integrationDesc: 'No tienes que cambiar lo que ya usas. Unimos tus herramientas — Airtable, Slack, Gmail, Stripe, hojas de cálculo — en un solo flujo que funciona, y le sumamos IA donde ayuda.',
+      pythonTitle: 'Diagnóstico de Procesos',
+      pythonDesc: 'Revisamos cómo trabajas hoy, detectamos lo que te quita tiempo y te mostramos exactamente qué automatizar primero para el mayor impacto.',
       chatBotsTitle: 'Chatbots con IA',
-      chatBotsDesc: 'Agentes en WhatsApp y Telegram potenciados por LLMs que gestionan soporte y ventas las 24 horas.',
+      chatBotsDesc: 'Agentes en WhatsApp y Telegram que atienden a tus clientes y ayudan a vender, las 24 horas, sin que tu equipo esté pendiente.',
       consultTitle: '¿No sabes por dónde empezar?',
       consultDesc: 'Auditamos tus procesos manuales y mapeamos las oportunidades de automatización de mayor impacto — antes de que te comprometas a nada.',
       consultBtn: 'Obtén una Auditoría Gratis'
