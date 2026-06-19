@@ -1,5 +1,18 @@
+// Single source of truth for the scheduling link.
+export const BOOKING_URL = 'https://calendly.com/defriction-defriction/30min';
+
+// Canonical site origin, used for SEO canonical + Open Graph URLs.
+export const SITE_URL = 'https://defriction.org';
+
+// Single point of contact. Form submissions are delivered here via FormSubmit.
+export const CONTACT_EMAIL = 'defriction@defriction.org';
+
 export const ui = {
   en: {
+    seo: {
+      title: 'defriction — Digital Automation, n8n Workflows & AI Bots',
+      description: 'We build scalable digital products and automated workflows with n8n, Python and AI so you can focus on growing, not grinding. Book a free discovery call.'
+    },
     nav: { services: 'Services', process: 'Process', products: 'Products', caseStudies: 'Case Studies', book: 'Book Discovery' },
     hero: {
       badge: 'Accepting new clients for Q4',
@@ -99,6 +112,17 @@ export const ui = {
       btn: 'Book Discovery Call',
       note: 'No commitment required. 15-minute intro chat.'
     },
+    contact: {
+      title: 'Prefer to write?',
+      subtitle: 'Send us a message and we will reply by email, usually within one business day.',
+      name: 'Name',
+      email: 'Email',
+      message: 'Message',
+      namePlaceholder: 'Your name',
+      emailPlaceholder: 'you@company.com',
+      messagePlaceholder: 'Tell us about your project or process you want to automate...',
+      send: 'Send Message'
+    },
     footer: {
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
@@ -106,6 +130,10 @@ export const ui = {
     }
   },
   es: {
+    seo: {
+      title: 'defriction — Automatización Digital, Flujos n8n y Bots con IA',
+      description: 'Diseñamos productos digitales escalables y flujos automatizados con n8n, Python e IA para que te enfoques en crecer, no en repetir tareas. Agenda una llamada gratis.'
+    },
     nav: { services: 'Servicios', process: 'Proceso', products: 'Productos', caseStudies: 'Casos de Éxito', book: 'Agendar Cita' },
     hero: {
       badge: 'Aceptando nuevos clientes Q4',
@@ -204,6 +232,17 @@ export const ui = {
       subtitle: 'Deja de hacer el trabajo de un robot. Construyamos un sistema que trabaje para ti, 24/7.',
       btn: 'Agendar Llamada',
       note: 'Sin compromiso. Charla introductoria de 15 minutos.'
+    },
+    contact: {
+      title: '¿Prefieres escribir?',
+      subtitle: 'Envíanos un mensaje y te respondemos por correo, normalmente en un día hábil.',
+      name: 'Nombre',
+      email: 'Correo',
+      message: 'Mensaje',
+      namePlaceholder: 'Tu nombre',
+      emailPlaceholder: 'tu@empresa.com',
+      messagePlaceholder: 'Cuéntanos sobre tu proyecto o el proceso que quieres automatizar...',
+      send: 'Enviar Mensaje'
     },
     footer: {
       privacy: 'Política de Privacidad',

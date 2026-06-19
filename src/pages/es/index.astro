@@ -9,13 +9,16 @@ import CaseStudies from '../../components/CaseStudies.astro';
 import Products from '../../components/Products.astro';
 import Testimonials from '../../components/Testimonials.astro';
 import FAQ from '../../components/FAQ.astro';
+import Contact from '../../components/Contact.astro';
 import FooterCTA from '../../components/FooterCTA.astro';
 import Footer from '../../components/Footer.astro';
+import { ui } from '../../i18n/ui';
 
-const lang = 'en';
+const lang = 'es';
+const t = ui[lang].seo;
 ---
 
-<Layout title="defriction - Automatización Digital" lang={lang}>
+<Layout title={t.title} description={t.description} lang={lang}>
     <Navbar lang={lang} />
     <Hero lang={lang} />
     <Products lang={lang} />
@@ -25,6 +28,7 @@ const lang = 'en';
     <CaseStudies lang={lang} />
     <Testimonials lang={lang} />
     <FAQ lang={lang} />
+    <Contact lang={lang} />
     <FooterCTA lang={lang} />
     <Footer lang={lang} />
 </Layout>

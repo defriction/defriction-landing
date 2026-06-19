@@ -1,5 +1,5 @@
 ---
-import { ui } from '../i18n/ui';
+import { ui, BOOKING_URL } from '../i18n/ui';
 const { lang = 'en' } = Astro.props;
 const t = ui[lang as keyof typeof ui].nav;
 ---
@@ -23,7 +23,7 @@ const t = ui[lang as keyof typeof ui].nav;
                 <a href={lang === 'es' ? '/' : '/es'} class="text-sm font-bold text-text-muted hover:text-primary transition-colors">
                     {lang === 'es' ? 'EN' : 'ES'}
                 </a>
-                <a href="mailto:contactenos@defriction.com" class="bg-primary hover:bg-primary-dark text-white text-sm font-bold py-2.5 px-6 rounded-lg transition-all shadow-lg hover:shadow-primary/30 flex items-center gap-2 group">
+                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primary-dark text-white text-sm font-bold py-2.5 px-6 rounded-lg transition-all shadow-lg hover:shadow-primary/30 flex items-center gap-2 group">
                     <span>{t.book}</span>
                     <span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
                 </a>
@@ -47,7 +47,7 @@ const t = ui[lang as keyof typeof ui].nav;
                     {lang === 'es' ? 'Switch to English' : 'Cambiar a Español'}
                 </a>
             </div>
-            <a href="mailto:contactenos@defriction.com" class="w-full bg-primary hover:bg-primary-dark text-white text-base font-bold py-3 px-6 rounded-lg transition-all shadow-md flex items-center justify-center gap-2 mt-2">
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary-dark text-white text-base font-bold py-3 px-6 rounded-lg transition-all shadow-md flex items-center justify-center gap-2 mt-2">
                 <span>{t.book}</span>
                 <span class="material-symbols-outlined">arrow_forward</span>
             </a>
