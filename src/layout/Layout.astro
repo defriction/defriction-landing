@@ -54,6 +54,24 @@ import '../styles/global.css';
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
+    <!-- SEO / JSON-LD Structured Data -->
+    <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "defriction",
+      "url": site,
+      "description": description,
+      "publisher": {
+        "@type": "Organization",
+        "name": "defriction",
+        "logo": {
+          "@type": "ImageObject",
+          "url": ogImageUrl
+        }
+      }
+    })} />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
