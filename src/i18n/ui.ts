@@ -93,7 +93,8 @@ export const ui = {
       techNotesTitle: 'Technical notes',
       mvpScopeTitle: 'Good to know',
       requestDemo: 'Request a demo',
-      watchLive: 'Watch a live tournament',
+      watchLive: 'Explore the public portal',
+      galleryPortalNote: 'These are real screenshots. Want to see it live? Explore the public portal and browse real tournaments.',
       finalCtaTitle: 'Want to see it in action?'
     },
     testimonials: {
@@ -231,7 +232,8 @@ export const ui = {
       techNotesTitle: 'Notas técnicas',
       mvpScopeTitle: 'Bueno saber',
       requestDemo: 'Solicita una demo',
-      watchLive: 'Ver un torneo en vivo',
+      watchLive: 'Explorar el portal público',
+      galleryPortalNote: 'Estas son capturas reales. ¿Quieres verlo en vivo? Entra al portal público y explora torneos reales.',
       finalCtaTitle: '¿Quieres verlo en acción?'
     },
     testimonials: {

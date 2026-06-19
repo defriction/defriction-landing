@@ -175,6 +175,17 @@ const demoCtas = [
     </section>
   )}
 
+  <!-- Public portal invite (below the gallery) -->
+  {isLink(data.ctas.liveUrl) && (
+    <section class="text-center mb-16">
+      <p class="text-text-muted dark:text-gray-400 max-w-2xl mx-auto mb-5">{t.galleryPortalNote}</p>
+      <a href={data.ctas.liveUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-base font-bold rounded-lg bg-[var(--brand)] hover:bg-[var(--brand-dark)] text-white transition-all shadow-md hover:shadow-lg">
+        <span class="material-symbols-outlined text-[20px]" aria-hidden="true">public</span>
+        {t.watchLive}
+      </a>
+    </section>
+  )}
+
   <!-- Sober info blocks. Full width when only one is present. -->
   {(data.techNotes.length > 0 || data.honestScope.length > 0) && (
     <section class:list={["grid gap-8 mb-16 text-sm", data.techNotes.length > 0 && data.honestScope.length > 0 ? "md:grid-cols-2" : "grid-cols-1"]}>

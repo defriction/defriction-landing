@@ -128,30 +128,28 @@ brand:
 
 image: ../../assets/products/sinnet/hero.png
 gallery:
-  - src: ../../assets/products/sinnet/01.png
-    caption:
-      en: "Automatically generate the groups from your registered players."
-      es: "Genera los grupos automáticamente a partir de tus inscritos."
-  - src: ../../assets/products/sinnet/02.png
-    caption:
-      en: "Drag and schedule matches across courts and time slots."
-      es: "Arrastra y programa los partidos en cada cancha y horario."
-  - src: ../../assets/products/sinnet/03.png
-    caption:
-      en: "Capture live scores, court by court."
-      es: "Captura los puntajes en vivo, cancha por cancha."
+  - src: ../../assets/products/sinnet/05.png
+    caption: { en: "Create the tournament, its categories and entry fees.", es: "Crea el torneo, sus categorías y tarifas de inscripción." }
+  - src: ../../assets/products/sinnet/09.png
+    caption: { en: "Player profiles, history and reliability, all in one place.", es: "Perfiles, historial y confiabilidad de tus jugadores, en un solo lugar." }
   - src: ../../assets/products/sinnet/04.png
-    caption:
-      en: "Keep track of registrations and confirmed payments."
-      es: "Lleva el control de inscripciones y pagos confirmados."
+    caption: { en: "Track registrations and confirmed payments.", es: "Controla las inscripciones y los pagos confirmados." }
+  - src: ../../assets/products/sinnet/06.png
+    caption: { en: "Set up your courts and their availability.", es: "Configura tus canchas y su disponibilidad." }
+  - src: ../../assets/products/sinnet/01.png
+    caption: { en: "Automatically generate the groups from your registered players.", es: "Genera los grupos automáticamente a partir de tus inscritos." }
+  - src: ../../assets/products/sinnet/02.png
+    caption: { en: "Drag and schedule matches across courts and time slots.", es: "Arrastra y programa los partidos por cancha y horario." }
+  - src: ../../assets/products/sinnet/03.png
+    caption: { en: "Follow what's in play, court by court, in real time.", es: "Sigue lo que está en juego, cancha por cancha, en tiempo real." }
+  - src: ../../assets/products/sinnet/07.png
+    caption: { en: "Capture the score set by set, with tiebreaks and super tie-breaks.", es: "Captura el marcador set por set, con tiebreaks y super tie-break." }
+  - src: ../../assets/products/sinnet/08.png
+    caption: { en: "Group standings and tiebreakers, computed for you.", es: "Tablas de posiciones y desempates, calculados por ti." }
+  - src: ../../assets/products/sinnet/10.png
+    caption: { en: "Public results anyone can follow with a single link.", es: "Resultados públicos que cualquiera sigue con un solo enlace." }
 
-# Contact is the only live channel today (no form/Calendly yet).
-# liveUrl: needs the production domain (devops) + a seeded permanent demo
-# tournament (backend). Pattern, served behind base href /tennis-admin/:
-#   https://<prod-domain>/tennis-admin/public-tournament-portal?tenantSlug=<slug>&tournamentId=<id>&tab=live
-# A finished tournament does NOT 404 — the portal shows a read-only "Finished" view,
-# so a demo link stays valid forever. Set liveUrl once those exist.
 ctas:
   demoUrl: "mailto:defriction@defriction.org?subject=Quiero%20unir%20mi%20academia%20a%20Sinnet%20App"
-  liveUrl: "#"
+  liveUrl: "https://n8n.srv1153123.hstgr.cloud/tennis-admin/clubs"
   contactUrl: "mailto:defriction@defriction.org?subject=Quiero%20unir%20mi%20academia%20a%20Sinnet%20App"
