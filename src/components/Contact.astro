@@ -1,0 +1,46 @@
+---
+import { ui, CONTACT_EMAIL } from '../i18n/ui';
+const { lang = 'en' } = Astro.props;
+const t = ui[lang as keyof typeof ui].contact;
+
+// FormSubmit delivers each submission to CONTACT_EMAIL. No backend required.
+const action = `https://formsubmit.co/${CONTACT_EMAIL}`;
+const site = Astro.site ?? new URL('https://defriction.org');
+const redirect = new URL(`${lang === 'es' ? '/es' : '/'}?sent=1`, site).href;
+const subject = lang === 'es' ? 'Nuevo mensaje desde defriction.org' : 'New message from defriction.org';
+const inputClass =
+  'w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-surface-dark px-4 py-3 text-text-main dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/30 outline-none transition';
+---
+<section class="py-20 bg-background-soft dark:bg-background-dark" id="contact">
+    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-extrabold text-text-main dark:text-white mb-3 tracking-tight">{t.title}</h2>
+            <p class="text-text-muted dark:text-gray-400">{t.subtitle}</p>
+        </div>
+        <form action={action} method="POST" class="flex flex-col gap-5">
+            <input type="hidden" name="_subject" value={subject} />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value={redirect} />
+            <!-- Honeypot: bots fill this, humans don't -->
+            <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+
+            <div class="flex flex-col gap-2">
+                <label for="name" class="text-sm font-semibold text-text-main dark:text-white">{t.name}</label>
+                <input id="name" type="text" name="name" required placeholder={t.namePlaceholder} class={inputClass} />
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="email" class="text-sm font-semibold text-text-main dark:text-white">{t.email}</label>
+                <input id="email" type="email" name="email" required placeholder={t.emailPlaceholder} class={inputClass} />
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="message" class="text-sm font-semibold text-text-main dark:text-white">{t.message}</label>
+                <textarea id="message" name="message" required rows="5" placeholder={t.messagePlaceholder} class={`${inputClass} resize-y`}></textarea>
+            </div>
+            <button type="submit" class="bg-primary hover:bg-primary-dark text-white font-bold py-3.5 px-8 rounded-lg transition-all shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-2 group">
+                {t.send}
+                <span class="material-symbols-outlined text-[20px] group-hover:translate-x-0.5 transition-transform" aria-hidden="true">send</span>
+            </button>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,33 @@
+---
+import Layout from './Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+	title: string;
+	description?: string;
+	lang?: string;
+	lastUpdated: string;
+}
+
+const { title, description = '', lang = 'en', lastUpdated } = Astro.props;
+const updatedLabel = lang === 'es' ? 'Última actualización' : 'Last updated';
+const backLabel = lang === 'es' ? 'Volver al inicio' : 'Back to home';
+const homeHref = lang === 'es' ? '/es' : '/';
+---
+
+<Layout title={`${title} — defriction`} description={description} lang={lang}>
+	<Navbar lang={lang} />
+	<main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+		<a href={homeHref} class="text-sm font-medium text-primary hover:text-primary-dark inline-flex items-center gap-1 mb-8">
+			<span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_back</span>
+			{backLabel}
+		</a>
+		<h1 class="text-3xl sm:text-4xl font-extrabold text-text-main dark:text-white mb-2 tracking-tight">{title}</h1>
+		<p class="text-sm text-text-muted mb-10">{updatedLabel}: {lastUpdated}</p>
+		<article class="legal-prose">
+			<slot />
+		</article>
+	</main>
+	<Footer lang={lang} />
+</Layout>

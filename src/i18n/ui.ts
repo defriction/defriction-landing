@@ -1,3 +1,9 @@
+// Scheduling link for the site-level "Book a Call" CTAs.
+export const BOOKING_URL = 'https://calendly.com/defriction-defriction/30min';
+
+// Single point of contact. Form submissions are delivered here via FormSubmit.
+export const CONTACT_EMAIL = 'defriction@defriction.org';
+
 export const ui = {
   en: {
     meta: {
@@ -117,6 +123,17 @@ export const ui = {
       subtitle: 'Stop doing the robot\'s work. Let\'s build a system that runs for you, 24/7.',
       btn: 'Book a Call',
       note: 'No commitment — a 15-minute intro call.'
+    },
+    contact: {
+      title: 'Prefer to write?',
+      subtitle: 'Send us a message and we will reply by email, usually within one business day.',
+      name: 'Name',
+      email: 'Email',
+      message: 'Message',
+      namePlaceholder: 'Your name',
+      emailPlaceholder: 'you@company.com',
+      messagePlaceholder: 'Tell us about your project or the process you want to automate...',
+      send: 'Send Message'
     },
     footer: {
       privacy: 'Privacy Policy',
@@ -242,6 +259,17 @@ export const ui = {
       subtitle: 'Deja de hacer el trabajo de un robot. Construyamos un sistema que trabaje para ti, 24/7.',
       btn: 'Agendar Llamada',
       note: 'Sin compromiso — una charla introductoria de 15 minutos.'
+    },
+    contact: {
+      title: '¿Prefieres escribir?',
+      subtitle: 'Envíanos un mensaje y te respondemos por correo, normalmente en un día hábil.',
+      name: 'Nombre',
+      email: 'Correo',
+      message: 'Mensaje',
+      namePlaceholder: 'Tu nombre',
+      emailPlaceholder: 'tu@empresa.com',
+      messagePlaceholder: 'Cuéntanos sobre tu proyecto o el proceso que quieres automatizar...',
+      send: 'Enviar Mensaje'
     },
     footer: {
       privacy: 'Política de Privacidad',
