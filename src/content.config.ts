@@ -37,7 +37,9 @@ const products = defineCollection({
         })
         .optional(),
       image: image(),
-      gallery: z.array(image()).optional(),
+      gallery: z
+        .array(z.object({ src: image(), caption: bilingual }))
+        .optional(),
       ctas: z.object({
         demoUrl: z.string(),
         liveUrl: z.string(),

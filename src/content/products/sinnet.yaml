@@ -128,10 +128,22 @@ brand:
 
 image: ../../assets/products/sinnet/hero.png
 gallery:
-  - ../../assets/products/sinnet/01.png
-  - ../../assets/products/sinnet/02.png
-  - ../../assets/products/sinnet/03.png
-  - ../../assets/products/sinnet/04.png
+  - src: ../../assets/products/sinnet/01.png
+    caption:
+      en: "Automatically generate the groups from your registered players."
+      es: "Genera los grupos automáticamente a partir de tus inscritos."
+  - src: ../../assets/products/sinnet/02.png
+    caption:
+      en: "Drag and schedule matches across courts and time slots."
+      es: "Arrastra y programa los partidos en cada cancha y horario."
+  - src: ../../assets/products/sinnet/03.png
+    caption:
+      en: "Capture live scores, court by court."
+      es: "Captura los puntajes en vivo, cancha por cancha."
+  - src: ../../assets/products/sinnet/04.png
+    caption:
+      en: "Keep track of registrations and confirmed payments."
+      es: "Lleva el control de inscripciones y pagos confirmados."
 
 # Contact is the only live channel today (no form/Calendly yet).
 # liveUrl: needs the production domain (devops) + a seeded permanent demo
