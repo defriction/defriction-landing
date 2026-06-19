@@ -1,8 +1,10 @@
 ---
 import { ui } from '../i18n/ui';
+import { productHref, type Lang } from '../lib/products';
 
 const { lang = 'en' } = Astro.props;
-const t = ui[lang as keyof typeof ui].products;
+const l = lang as Lang;
+const t = ui[l].products;
 
 const products = [
   {
@@ -30,12 +32,12 @@ const products = [
     gradient: 'from-[#229ED9] to-[#1f6fb0]'
   },
   {
-    // Sinet — tennis tournament manager, coming soon teaser.
-    title: t.sinetTitle,
-    desc: t.sinetDesc,
+    // Sinnet — tennis tournament manager (live). Links to its detail page.
+    title: t.sinnetTitle,
+    desc: t.sinnetDesc,
     icon: 'sports_tennis',
     gradient: 'from-primary to-blue-600',
-    isComingSoon: true
+    href: productHref(l, 'sinnet')
   }
 ];
 ---
@@ -48,33 +50,51 @@ const products = [
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {products.map((product) => (
-        <div class="bg-white dark:bg-surface-dark rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col group">
-          <div class="h-64 overflow-hidden relative">
-            {product.image ? (
-              <>
-                <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors z-10"></div>
-                <img
-                  src={product.image}
-                  alt={product.alt}
-                  loading="lazy"
-                  class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                />
-              </>
-            ) : (
-              <div class={`w-full h-full flex items-center justify-center bg-gradient-to-br ${product.gradient}`}>
-                <span class="material-symbols-outlined text-white/90 text-8xl group-hover:scale-110 transition-transform duration-500" aria-hidden="true">{product.icon}</span>
-              </div>
-            )}
+      {products.map((product) => {
+        const media = product.image ? (
+          <>
+            <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors z-10"></div>
+            <img
+              src={product.image}
+              alt={product.alt}
+              loading="lazy"
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+            />
+          </>
+        ) : (
+          <div class={`w-full h-full flex items-center justify-center bg-gradient-to-br ${product.gradient}`}>
+            <span class="material-symbols-outlined text-white/90 text-8xl group-hover:scale-110 transition-transform duration-500" aria-hidden="true">{product.icon}</span>
           </div>
+        );
+        return (
+        <div class="bg-white dark:bg-surface-dark rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col group">
+          {product.href ? (
+            <a href={product.href} class="block h-64 overflow-hidden relative">{media}</a>
+          ) : (
+            <div class="h-64 overflow-hidden relative">{media}</div>
+          )}
           <div class="p-8 flex-1 flex flex-col">
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">{product.title}</h3>
+            {product.href ? (
+              <a href={product.href} class="block">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary transition-colors">{product.title}</h3>
+              </a>
+            ) : (
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">{product.title}</h3>
+            )}
             <p class="text-gray-600 dark:text-gray-400 mb-6 flex-1">{product.desc}</p>
             {product.isComingSoon ? (
               <span class="inline-flex items-center justify-center px-6 py-3 border border-gray-200 dark:border-gray-700 text-base font-medium rounded-md text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-800 cursor-not-allowed w-full sm:w-auto self-start">
                 <span class="material-symbols-outlined text-[20px] mr-2" aria-hidden="true">schedule</span>
                 {t.comingSoonBtn}
               </span>
+            ) : product.href ? (
+              <a
+                href={product.href}
+                class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark transition-colors w-full sm:w-auto self-start shadow-md hover:shadow-lg group/cta"
+              >
+                {t.viewProduct}
+                <span class="material-symbols-outlined text-[20px] ml-2 group-hover/cta:translate-x-0.5 transition-transform" aria-hidden="true">arrow_forward</span>
+              </a>
             ) : product.contact ? (
               <a
                 href={product.contact}
@@ -109,7 +129,8 @@ const products = [
             )}
           </div>
         </div>
-      ))}
+        );
+      })}
     </div>
   </div>
 </section>

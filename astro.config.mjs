@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://defriction.com',
+  site: 'https://defriction.org',
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],

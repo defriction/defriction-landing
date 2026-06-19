@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://defriction.com/sitemap-index.xml
+Sitemap: https://defriction.org/sitemap-index.xml
