@@ -73,14 +73,12 @@ export const ui = {
     products: {
       title: 'Star Products',
       subtitle: 'Ready-to-use automation tools to streamline your daily operations.',
-      financeTitle: 'Finance Tracker Bot',
-      financeDesc: 'Keep your finances in check effortlessly. Log expenses and income directly through Telegram.',
-      inventoryTitle: 'Smart Inventory Bot',
-      inventoryDesc: 'Real-time inventory management. Track stock levels and movements with simple chat commands.',
-      cta: 'Start Bot',
-      comingSoonTitle: 'Coming Soon',
-      comingSoonDesc: 'New innovative projects are currently in development. Stay tuned for more automation tools.',
-      comingSoonBtn: 'In Development'
+      comingSoonBtn: 'In Development',
+      viewDetails: 'View details',
+      backToProducts: '← Back to products',
+      featuresTitle: 'Features',
+      galleryTitle: 'Gallery',
+      availableOn: 'Available on'
     },
     testimonials: {
       title: 'Trusted by Innovators',
@@ -194,14 +192,12 @@ export const ui = {
     products: {
       title: 'Productos Disponibles',
       subtitle: 'Herramientas de automatización listas para usar que optimizan tus operaciones diarias.',
-      financeTitle: 'Bot de Finanzas',
-      financeDesc: 'Mantén tus finanzas bajo control sin esfuerzo. Registra gastos e ingresos directamente por Telegram.',
-      inventoryTitle: 'Bot de Inventario Smart',
-      inventoryDesc: 'Gestión de inventario en tiempo real. Rastrea niveles de stock y movimientos con comandos de chat simples.',
-      cta: 'Iniciar Bot',
-      comingSoonTitle: 'Próximamente',
-      comingSoonDesc: 'Nuevos proyectos innovadores están en desarrollo. Espera más herramientas de automatización pronto.',
-      comingSoonBtn: 'En Desarrollo'
+      comingSoonBtn: 'En Desarrollo',
+      viewDetails: 'Ver detalles',
+      backToProducts: '← Volver a productos',
+      featuresTitle: 'Características',
+      galleryTitle: 'Galería',
+      availableOn: 'Disponible en'
     },
     testimonials: {
       title: 'Confían en Nosotros',

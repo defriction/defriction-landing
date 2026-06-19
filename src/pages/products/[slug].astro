@@ -1,0 +1,29 @@
+---
+import Layout from '../../layout/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import ProductDetail from '../../components/ProductDetail.astro';
+import { getSortedProducts } from '../../lib/products';
+
+export async function getStaticPaths() {
+  const products = await getSortedProducts();
+  return products.map((product) => ({
+    params: { slug: product.id },
+    props: { product },
+  }));
+}
+
+const lang = 'en';
+const { product } = Astro.props;
+const { data } = product;
+
+const title = data.seo?.title?.[lang] ?? `${data.name[lang]} — defriction`;
+const description = data.seo?.description?.[lang] ?? data.tagline[lang];
+const alternates = { en: `/products/${product.id}`, es: `/es/productos/${product.id}` };
+---
+
+<Layout title={title} description={description} lang={lang} ogImage={data.image.src} alternates={alternates}>
+  <Navbar lang={lang} />
+  <ProductDetail product={product} lang={lang} />
+  <Footer lang={lang} />
+</Layout>

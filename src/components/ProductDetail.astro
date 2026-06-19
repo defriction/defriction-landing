@@ -1,0 +1,97 @@
+---
+import { Image } from 'astro:assets';
+import { ui } from '../i18n/ui';
+import { productsAnchor, type Lang, type Product } from '../lib/products';
+
+interface Props {
+  product: Product;
+  lang: Lang;
+}
+
+const { product, lang } = Astro.props;
+const { data } = product;
+const t = ui[lang].products;
+
+const ctas = [
+  { url: data.links?.telegram, label: 'Telegram', classes: 'bg-[#229ED9] hover:bg-[#1f91c7]' },
+  { url: data.links?.whatsapp, label: 'WhatsApp', classes: 'bg-[#25D366] hover:bg-[#20bd5a]' },
+  { url: data.links?.demo, label: lang === 'es' ? 'Ver demo' : 'View demo', classes: 'bg-accent hover:bg-accent-dark' },
+  { url: data.links?.web, label: lang === 'es' ? 'Sitio web' : 'Website', classes: 'bg-text-main hover:bg-black' },
+].filter((c) => c.url);
+---
+
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+  <a href={productsAnchor(lang)} class="inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-primary-dark mb-8">
+    <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+    {t.backToProducts}
+  </a>
+
+  <!-- Hero -->
+  <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16">
+    <div class="relative order-1 lg:order-2">
+      <div class="absolute -inset-1 bg-gradient-to-r from-primary via-accent/40 to-primary/60 rounded-2xl blur opacity-30"></div>
+      <Image
+        src={data.image}
+        alt={data.name[lang]}
+        widths={[600, 1000]}
+        sizes="(min-width: 1024px) 50vw, 100vw"
+        class="relative w-full rounded-2xl shadow-xl object-cover"
+      />
+    </div>
+    <div class="order-2 lg:order-1">
+      <h1 class="text-4xl lg:text-5xl font-extrabold tracking-tight text-text-main mb-4">{data.name[lang]}</h1>
+      <p class="text-xl text-text-muted leading-relaxed mb-6">{data.tagline[lang]}</p>
+      {data.tags.length > 0 && (
+        <div class="flex flex-wrap gap-2 mb-8">
+          {data.tags.map((tag) => (
+            <span class="text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full">{tag}</span>
+          ))}
+        </div>
+      )}
+      {ctas.length > 0 && (
+        <div>
+          <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">{t.availableOn}</p>
+          <div class="flex flex-wrap gap-3">
+            {ctas.map((cta) => (
+              <a href={cta.url} target="_blank" rel="noopener noreferrer"
+                class:list={["inline-flex items-center justify-center px-6 py-3 text-base font-bold rounded-lg text-white transition-all shadow-md hover:shadow-lg", cta.classes]}>
+                {cta.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+
+  <!-- Description + Features -->
+  <div class="grid lg:grid-cols-3 gap-10 mb-16">
+    <div class="lg:col-span-2 text-lg text-text-muted leading-relaxed" set:html={data.description[lang]}></div>
+    {data.features.length > 0 && (
+      <div>
+        <h2 class="text-xl font-bold text-text-main mb-4">{t.featuresTitle}</h2>
+        <ul class="flex flex-col gap-3">
+          {data.features.map((f) => (
+            <li class="flex items-start gap-2 text-text-muted">
+              <span class="material-symbols-outlined text-primary text-[20px] shrink-0">check_circle</span>
+              <span>{f[lang]}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </div>
+
+  <!-- Gallery -->
+  {data.gallery && data.gallery.length > 0 && (
+    <div class="mb-8">
+      <h2 class="text-xl font-bold text-text-main mb-6">{t.galleryTitle}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {data.gallery.map((img) => (
+          <Image src={img} alt={data.name[lang]} widths={[400, 800]} sizes="(min-width: 1024px) 33vw, 100vw"
+            class="w-full rounded-xl shadow-md object-cover" />
+        ))}
+      </div>
+    </div>
+  )}
+</main>

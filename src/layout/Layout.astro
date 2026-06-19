@@ -7,14 +7,16 @@ interface Props {
 	description?: string;
 	lang?: string;
 	ogImage?: string;
+	// Per-page hreflang alternates (paths). Default to the home pages.
+	alternates?: { en: string; es: string };
 }
 
-const { title, description = '', lang = 'en', ogImage = '/image.png' } = Astro.props;
+const { title, description = '', lang = 'en', ogImage = '/image.png', alternates } = Astro.props;
 
 // Canonical URL for the current page, plus the en/es alternates for hreflang.
 const canonical = new URL(Astro.url.pathname, SITE_URL).href;
-const enUrl = new URL('/', SITE_URL).href;
-const esUrl = new URL('/es', SITE_URL).href;
+const enUrl = new URL(alternates?.en ?? '/', SITE_URL).href;
+const esUrl = new URL(alternates?.es ?? '/es', SITE_URL).href;
 const ogImageUrl = new URL(ogImage, SITE_URL).href;
 ---
 
