@@ -63,7 +63,7 @@ export const ui = {
       subtitle: 'Real systems we have shipped for teams scaling with defriction.',
       viewAll: 'View all work',
       cs1Title: 'Order Processing for a Retail Brand',
-      cs1Desc: 'Cut manual data entry by 95% with an n8n + Shopify integration that runs itself.',
+      cs1Desc: 'Cut manual data entry by 95% with a Shopify integration that runs itself.',
       cs2Title: 'Custom CRM & Client Portal',
       cs2Desc: 'Shipped a fully custom client portal on Airtable + Softr in just two weeks.'
     },
@@ -117,7 +117,7 @@ export const ui = {
       q2: 'Do I need technical knowledge to manage the bots?',
       a2: '<strong>Zero technical skills required.</strong> Our tools feel like apps you already use — simple buttons in Telegram, WhatsApp, or clean web dashboards. We handle the code; you run the business. We also provide personalized video walkthroughs for your team.',
       q3: 'Is my data secure?',
-      a3: 'Security is our top priority. We encrypt all data in transit, and unlike generic SaaS tools we often build on <strong>self-hosted infrastructure (like n8n)</strong> — so your data stays on your servers, not ours. We also sign NDAs before any project begins.',
+      a3: 'Security is our top priority. We encrypt all data in transit, and unlike generic SaaS tools we often build on <strong>self-hosted infrastructure</strong> — so your data stays on your servers, not ours. We also sign NDAs before any project begins.',
       q4: 'Do you offer ongoing support?',
       a4: 'Absolutely. Software evolves and APIs change, so we offer <strong>"Peace of Mind" maintenance packages</strong> covering API updates, server monitoring and bug fixes. Retainer options keep your automations improving as your business grows.'
     },
@@ -202,7 +202,7 @@ export const ui = {
       subtitle: 'Sistemas reales que hemos entregado para equipos que escalan con defriction.',
       viewAll: 'Ver todo el trabajo',
       cs1Title: 'Procesamiento de Pedidos para Marca Retail',
-      cs1Desc: 'Reducción del 95% en entrada manual de datos con una integración n8n + Shopify que se ejecuta sola.',
+      cs1Desc: 'Reducción del 95% en entrada manual de datos con una integración con Shopify que se ejecuta sola.',
       cs2Title: 'CRM Personalizado y Portal de Clientes',
       cs2Desc: 'Entregamos un portal de clientes totalmente personalizado en Airtable + Softr en solo dos semanas.'
     },
@@ -256,7 +256,7 @@ export const ui = {
       q2: '¿Necesito conocimientos técnicos para manejar los bots?',
       a2: '<strong>No necesitas saber programar.</strong> Nuestras herramientas se sienten como las apps que ya usas — simples botones en Telegram, WhatsApp o dashboards web limpios. Nosotros nos encargamos del código; tú diriges el negocio. Además, incluimos videos de capacitación personalizados para tu equipo.',
       q3: '¿Mis datos están seguros?',
-      a3: 'La seguridad es nuestra prioridad. Encriptamos todos los datos en tránsito y, a diferencia de las herramientas SaaS genéricas, solemos construir sobre <strong>infraestructura autoalojada (como n8n)</strong> — así tus datos quedan en tus servidores, no en los nuestros. También firmamos NDAs antes de iniciar cualquier proyecto.',
+      a3: 'La seguridad es nuestra prioridad. Encriptamos todos los datos en tránsito y, a diferencia de las herramientas SaaS genéricas, solemos construir sobre <strong>infraestructura autoalojada</strong> — así tus datos quedan en tus servidores, no en los nuestros. También firmamos NDAs antes de iniciar cualquier proyecto.',
       q4: '¿Ofrecen soporte continuo?',
       a4: 'Por supuesto. El software evoluciona y las APIs cambian, por eso ofrecemos <strong>planes de mantenimiento "Tranquilidad Total"</strong> que cubren actualizaciones de APIs, monitoreo de servidores y corrección de errores. Los planes por retainer mantienen tus automatizaciones mejorando a medida que tu negocio crece.'
     },
