@@ -68,7 +68,7 @@ export const ui = {
       cs2Desc: 'Shipped a fully custom client portal on Airtable + Softr in just two weeks.'
     },
     products: {
-      title: 'What We Are Building',
+      title: 'Available Products',
       subtitle: 'Ready-to-use tools and custom builds that take work off your plate.',
       financeTitle: 'Finance Tracker Bot',
       financeDesc: 'Log expenses and income straight from Telegram — your books stay current with zero spreadsheets.',
@@ -206,7 +206,7 @@ export const ui = {
       cs2Desc: 'Entregamos un portal de clientes totalmente personalizado en Airtable + Softr en solo dos semanas.'
     },
     products: {
-      title: 'Lo Que Estamos Construyendo',
+      title: 'Productos Disponibles',
       subtitle: 'Herramientas listas para usar y desarrollos a medida que te quitan trabajo de encima.',
       financeTitle: 'Bot de Finanzas',
       financeDesc: 'Registra gastos e ingresos directamente desde Telegram — tus cuentas se mantienen al día sin hojas de cálculo.',
