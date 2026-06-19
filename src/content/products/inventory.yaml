@@ -1,0 +1,17 @@
+slug: inventory
+order: 3
+status: live
+icon: inventory_2
+gradient: "from-primary to-blue-600"
+name: { en: "Smart Inventory Bot", es: "Bot de Inventario Smart" }
+tagline: { en: "Real-time stock, by chat.", es: "Stock en tiempo real, por chat." }
+hero:
+  headline: { en: "Track stock levels and movements with simple chat commands.", es: "Controla niveles de stock y movimientos con simples comandos de chat." }
+  subtitle: { en: "Keep inventory under control without a heavy system.", es: "Mantén el inventario bajo control sin un sistema pesado." }
+overview: { en: "Track stock levels and movements in real time with simple chat commands.", es: "Controla niveles de stock y movimientos en tiempo real con simples comandos de chat." }
+features:
+  - { icon: inventory, title: { en: "Live stock", es: "Stock en vivo" }, desc: { en: "Check and update quantities from your phone.", es: "Consulta y actualiza cantidades desde tu celular." } }
+  - { icon: sync_alt, title: { en: "Movements", es: "Movimientos" }, desc: { en: "Record entries and exits as they happen.", es: "Registra entradas y salidas en el momento." } }
+actions:
+  - { label: { en: "Open on Telegram", es: "Abrir en Telegram" }, url: "https://t.me/inventario_smart_bot", variant: telegram }
+tags: []

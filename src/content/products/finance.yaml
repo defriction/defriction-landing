@@ -1,0 +1,19 @@
+slug: finance-tracker
+order: 2
+status: live
+icon: account_balance_wallet
+gradient: "from-primary to-emerald-600"
+name: { en: "Finance Tracker Bot", es: "Bot de Finanzas" }
+tagline: { en: "Your books, current — straight from Telegram.", es: "Tus cuentas al día — directo desde Telegram." }
+hero:
+  headline: { en: "Log income and expenses by chat. No spreadsheets.", es: "Registra ingresos y gastos por chat. Sin hojas de cálculo." }
+  subtitle: { en: "A Telegram bot that keeps your books up to date as you go.", es: "Un bot de Telegram que mantiene tus cuentas al día sobre la marcha." }
+overview: { en: "Log expenses and income straight from Telegram and keep your books current without spreadsheets.", es: "Registra gastos e ingresos directamente desde Telegram y mantén tus cuentas al día sin hojas de cálculo." }
+features:
+  - { icon: chat, title: { en: "Log by chat", es: "Registra por chat" }, desc: { en: "Add an expense or income in seconds with a simple message.", es: "Agrega un gasto o ingreso en segundos con un mensaje simple." } }
+  - { icon: category, title: { en: "Categories", es: "Categorías" }, desc: { en: "Organize movements by category for clear reports.", es: "Organiza los movimientos por categoría para reportes claros." } }
+  - { icon: summarize, title: { en: "Summaries", es: "Resúmenes" }, desc: { en: "See where your money goes, on demand.", es: "Mira a dónde va tu dinero, cuando quieras." } }
+actions:
+  - { label: { en: "Open on Telegram", es: "Abrir en Telegram" }, url: "https://t.me/defriction_expense_tracker_bot", variant: telegram }
+  - { label: { en: "Chat on WhatsApp", es: "Escribir por WhatsApp" }, url: "https://wa.me/573185652626", variant: whatsapp }
+tags: []

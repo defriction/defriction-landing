@@ -1,0 +1,17 @@
+slug: custom-automations
+order: 4
+status: live
+icon: smart_toy
+gradient: "from-[#229ED9] to-[#1f6fb0]"
+name: { en: "Custom Telegram Automations", es: "Automatizaciones a Medida en Telegram" }
+tagline: { en: "Bots built around your workflow.", es: "Bots hechos a la medida de tu flujo." }
+hero:
+  headline: { en: "Bespoke Telegram bots for how your team actually works.", es: "Bots de Telegram a la medida de cómo trabaja tu equipo." }
+  subtitle: { en: "Approvals, alerts, data capture and reporting — tailored to you.", es: "Aprobaciones, alertas, captura de datos y reportes — adaptados a ti." }
+overview: { en: "We design Telegram automations around your workflow — approvals, alerts, data capture and reporting.", es: "Diseñamos automatizaciones de Telegram a la medida de tu flujo — aprobaciones, alertas, captura de datos y reportes." }
+features:
+  - { icon: tune, title: { en: "Tailored to you", es: "A tu medida" }, desc: { en: "Built around your real process, not a template.", es: "Construido sobre tu proceso real, no una plantilla." } }
+  - { icon: bolt, title: { en: "Approvals & alerts", es: "Aprobaciones y alertas" }, desc: { en: "Trigger actions and notify the right people automatically.", es: "Dispara acciones y notifica a quien corresponde automáticamente." } }
+actions:
+  - { label: { en: "Talk to us", es: "Hablemos" }, url: "mailto:defriction@defriction.org?subject=Automatizaciones%20a%20Medida", variant: primary }
+tags: []

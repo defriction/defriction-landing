@@ -22,7 +22,7 @@ const description = data.hero.subtitle[lang];
 const alternates = { en: `/products/${data.slug}`, es: `/es/products/${data.slug}` };
 ---
 
-<Layout title={title} description={description} lang={lang} ogImage={data.image.src} alternates={alternates}>
+<Layout title={title} description={description} lang={lang} ogImage={data.image?.src} alternates={alternates}>
   <Navbar lang={lang} />
   <ProductDetail product={product} lang={lang} />
   <Footer lang={lang} />

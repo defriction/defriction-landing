@@ -3,6 +3,10 @@
 /* Enable class-based dark mode (`<html class="dark">`). */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Gradient utilities referenced from product data (YAML), which Tailwind's
+   source scanner can't see — force-generate them. */
+@source inline("bg-gradient-to-br from-primary to-blue-600 to-emerald-600 from-[#229ED9] to-[#1f6fb0]");
+
 /*
  * Design tokens — ported from the previous inline `tailwind.config`.
  * These generate utilities like `bg-primary`, `text-text-muted`,

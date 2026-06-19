@@ -18,26 +18,23 @@ const products = [
   {
     title: t.financeTitle,
     desc: t.financeDesc,
-    telegram: 'https://t.me/defriction_expense_tracker_bot',
-    whatsapp: 'https://wa.me/573185652626',
     image: '/financial.jpg',
-    alt: 'Finance Tracker Interface'
+    alt: 'Finance Tracker Interface',
+    href: productHref(l, 'finance-tracker')
   },
   {
     title: t.inventoryTitle,
     desc: t.inventoryDesc,
-    telegram: 'https://t.me/inventario_smart_bot',
     image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800',
-    alt: 'Smart Inventory Management'
+    alt: 'Smart Inventory Management',
+    href: productHref(l, 'inventory')
   },
   {
-    // Custom client automations — framed as bespoke work, links to contact.
     title: t.telegramTitle,
     desc: t.telegramDesc,
-    contact: 'mailto:defriction@defriction.org',
-    ctaLabel: t.telegramBtn,
     image: '/telegram-card.svg',
-    alt: 'Telegram'
+    alt: 'Telegram',
+    href: productHref(l, 'custom-automations')
   }
 ];
 ---

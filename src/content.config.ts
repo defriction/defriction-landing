@@ -36,15 +36,32 @@ const products = defineCollection({
           accent: z.string(),
         })
         .optional(),
-      image: image(),
+      // Cover/hero image is optional; products without one fall back to a
+      // gradient + Material Symbol icon (same look as the home cards).
+      image: image().optional(),
+      icon: z.string().optional(),
+      gradient: z.string().optional(),
       gallery: z
         .array(z.object({ src: image(), caption: bilingual }))
         .optional(),
-      ctas: z.object({
-        demoUrl: z.string(),
-        liveUrl: z.string(),
-        contactUrl: z.string().optional(),
-      }),
+      // Generic detail-page buttons (Telegram/WhatsApp/contact/etc.).
+      actions: z
+        .array(
+          z.object({
+            label: bilingual,
+            url: z.string(),
+            variant: z.enum(['primary', 'telegram', 'whatsapp', 'secondary']).default('primary'),
+          })
+        )
+        .default([]),
+      // Sinnet-specific CTAs (demo / live portal / contact).
+      ctas: z
+        .object({
+          demoUrl: z.string(),
+          liveUrl: z.string(),
+          contactUrl: z.string().optional(),
+        })
+        .optional(),
     }),
 });
 

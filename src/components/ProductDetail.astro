@@ -29,10 +29,35 @@ const brandStyle = [
 
 // Only render a CTA if its URL is a real link (placeholders use "#").
 const isLink = (url?: string) => !!url && url !== '#';
-const demoCtas = [
-  { url: data.ctas.demoUrl, label: t.requestDemo, primary: true },
-  { url: data.ctas.liveUrl, label: t.watchLive, primary: false },
-].filter((c) => isLink(c.url));
+const ext = (url: string) => url.startsWith('http');
+
+// Button styling by variant.
+const btnClass = (variant: string) => {
+  if (variant === 'telegram') return 'bg-[#229ED9] hover:bg-[#1f91c7] text-white';
+  if (variant === 'whatsapp') return 'bg-[#25D366] hover:bg-[#20bd5a] text-white';
+  if (variant === 'secondary')
+    return 'bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-text-main dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800';
+  return 'bg-[var(--brand)] hover:bg-[var(--brand-dark)] text-white';
+};
+
+// Hero/final buttons: generic `actions` if present, else Sinnet's `ctas`.
+const actions = data.actions ?? [];
+const ctas = data.ctas;
+const mapped = actions.map((a) => ({ label: a.label[lang], url: a.url, variant: a.variant }));
+const heroButtons =
+  mapped.length > 0
+    ? mapped
+    : [
+        ...(ctas && isLink(ctas.demoUrl) ? [{ label: t.requestDemo, url: ctas.demoUrl, variant: 'primary' }] : []),
+        ...(ctas && isLink(ctas.liveUrl) ? [{ label: t.watchLive, url: ctas.liveUrl, variant: 'secondary' }] : []),
+      ];
+const finalButtons =
+  mapped.length > 0
+    ? mapped
+    : [
+        ...(ctas && isLink(ctas.demoUrl) ? [{ label: t.requestDemo, url: ctas.demoUrl, variant: 'primary' }] : []),
+        ...(ctas && isLink(ctas.contactUrl) ? [{ label: ui[lang].nav.book, url: ctas.contactUrl, variant: 'secondary' }] : []),
+      ];
 ---
 
 <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16" style={brandStyle}>
@@ -45,8 +70,14 @@ const demoCtas = [
   <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-20">
     <div class="relative order-1 lg:order-2">
       <div class="absolute -inset-1 bg-gradient-to-r from-[var(--brand)] via-[var(--brand-accent)] to-[var(--brand)] rounded-2xl blur opacity-25"></div>
-      <Image src={data.image} alt={data.name[lang]} widths={[600, 1000]} sizes="(min-width: 1024px) 50vw, 100vw"
-        class="relative w-full rounded-2xl shadow-xl object-cover" />
+      {data.image ? (
+        <Image src={data.image} alt={data.name[lang]} widths={[600, 1000]} sizes="(min-width: 1024px) 50vw, 100vw"
+          class="relative w-full rounded-2xl shadow-xl object-cover" />
+      ) : (
+        <div class:list={["relative w-full aspect-[16/10] rounded-2xl shadow-xl flex items-center justify-center bg-gradient-to-br", data.gradient ?? 'from-primary to-blue-600']}>
+          <span class="material-symbols-outlined text-white text-[7rem]" aria-hidden="true">{data.icon}</span>
+        </div>
+      )}
     </div>
     <div class="order-2 lg:order-1">
       <h1 class="text-4xl lg:text-5xl font-extrabold tracking-tight text-text-main dark:text-white mb-4">{data.name[lang]}</h1>
@@ -59,11 +90,12 @@ const demoCtas = [
           ))}
         </div>
       )}
-      {demoCtas.length > 0 && (
+      {heroButtons.length > 0 && (
         <div class="flex flex-wrap gap-3">
-          {demoCtas.map((cta) => (
-            <a href={cta.url} class:list={["inline-flex items-center justify-center px-6 py-3 text-base font-bold rounded-lg transition-all shadow-md hover:shadow-lg", cta.primary ? "bg-[var(--brand)] hover:bg-[var(--brand-dark)] text-white" : "bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-text-main dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"]}>
-              {cta.label}
+          {heroButtons.map((b) => (
+            <a href={b.url} target={ext(b.url) ? '_blank' : undefined} rel={ext(b.url) ? 'noopener noreferrer' : undefined}
+              class:list={["inline-flex items-center justify-center px-6 py-3 text-base font-bold rounded-lg transition-all shadow-md hover:shadow-lg", btnClass(b.variant)]}>
+              {b.label}
             </a>
           ))}
         </div>
@@ -176,10 +208,10 @@ const demoCtas = [
   )}
 
   <!-- Public portal invite (below the gallery) -->
-  {isLink(data.ctas.liveUrl) && (
+  {isLink(ctas?.liveUrl) && (
     <section class="text-center mb-16">
       <p class="text-text-muted dark:text-gray-400 max-w-2xl mx-auto mb-5">{t.galleryPortalNote}</p>
-      <a href={data.ctas.liveUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-base font-bold rounded-lg bg-[var(--brand)] hover:bg-[var(--brand-dark)] text-white transition-all shadow-md hover:shadow-lg">
+      <a href={ctas.liveUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-base font-bold rounded-lg bg-[var(--brand)] hover:bg-[var(--brand-dark)] text-white transition-all shadow-md hover:shadow-lg">
         <span class="material-symbols-outlined text-[20px]" aria-hidden="true">public</span>
         {t.watchLive}
       </a>
@@ -209,16 +241,16 @@ const demoCtas = [
   )}
 
   <!-- Final CTA -->
-  {(isLink(data.ctas.demoUrl) || isLink(data.ctas.contactUrl)) && (
+  {finalButtons.length > 0 && (
     <section class="text-center bg-gradient-to-br from-[var(--brand-soft)] to-[var(--brand-accent-soft)] border border-[var(--brand-soft)] rounded-2xl px-6 py-12">
       <h2 class="text-2xl sm:text-3xl font-extrabold text-text-main dark:text-white mb-6">{t.finalCtaTitle}</h2>
       <div class="flex flex-wrap justify-center gap-3">
-        {isLink(data.ctas.demoUrl) && (
-          <a href={data.ctas.demoUrl} class="inline-flex items-center justify-center px-8 py-3.5 text-base font-bold rounded-lg bg-[var(--brand)] hover:bg-[var(--brand-dark)] text-white transition-all shadow-md hover:shadow-lg">{t.requestDemo}</a>
-        )}
-        {isLink(data.ctas.contactUrl) && (
-          <a href={data.ctas.contactUrl} class="inline-flex items-center justify-center px-8 py-3.5 text-base font-bold rounded-lg bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-text-main dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">{ui[lang].nav.book}</a>
-        )}
+        {finalButtons.map((b) => (
+          <a href={b.url} target={ext(b.url) ? '_blank' : undefined} rel={ext(b.url) ? 'noopener noreferrer' : undefined}
+            class:list={["inline-flex items-center justify-center px-8 py-3.5 text-base font-bold rounded-lg transition-all shadow-md hover:shadow-lg", btnClass(b.variant)]}>
+            {b.label}
+          </a>
+        ))}
       </div>
     </section>
   )}
