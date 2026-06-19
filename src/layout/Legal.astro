@@ -20,10 +20,10 @@ const homeHref = lang === 'es' ? '/es' : '/';
 	<Navbar lang={lang} />
 	<main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 		<a href={homeHref} class="text-sm font-medium text-primary hover:text-primary-dark inline-flex items-center gap-1 mb-8">
-			<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+			<span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_back</span>
 			{backLabel}
 		</a>
-		<h1 class="text-3xl sm:text-4xl font-extrabold text-text-main mb-2 tracking-tight">{title}</h1>
+		<h1 class="text-3xl sm:text-4xl font-extrabold text-text-main dark:text-white mb-2 tracking-tight">{title}</h1>
 		<p class="text-sm text-text-muted mb-10">{updatedLabel}: {lastUpdated}</p>
 		<article class="legal-prose">
 			<slot />

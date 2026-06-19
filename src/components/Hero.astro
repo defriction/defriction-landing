@@ -24,11 +24,11 @@ const t = ui[lang as keyof typeof ui].hero;
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
                     <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" class="bg-text-main hover:bg-black text-white px-8 py-3.5 rounded-lg font-bold text-base transition-all shadow-xl hover:shadow-2xl flex items-center justify-center gap-2">
                         {t.ctaStart}
-                        <span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+                        <span class="material-symbols-outlined text-[20px]" aria-hidden="true">rocket_launch</span>
                     </a>
-                    <a href="#case-studies" class="bg-white border border-gray-200 hover:bg-gray-50 text-text-main px-8 py-3.5 rounded-lg font-bold text-base transition-colors flex items-center justify-center gap-2">
+                    <a href="#products" class="bg-white border border-gray-200 hover:bg-gray-50 text-text-main px-8 py-3.5 rounded-lg font-bold text-base transition-colors flex items-center justify-center gap-2">
                         {t.ctaView}
-                        <span class="material-symbols-outlined text-[20px]">grid_view</span>
+                        <span class="material-symbols-outlined text-[20px]" aria-hidden="true">grid_view</span>
                     </a>
                 </div>
                 <!-- Trust Badges -->

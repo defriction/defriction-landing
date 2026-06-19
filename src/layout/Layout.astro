@@ -1,32 +1,43 @@
 ---
-import { SITE_URL } from '../i18n/ui';
-import '../styles/global.css';
-
 interface Props {
 	title: string;
 	description?: string;
 	lang?: string;
 	ogImage?: string;
+	// Per-page hreflang alternates (paths). Default to the home pages.
+	alternates?: { en: string; es: string };
 }
 
-const { title, description = '', lang = 'en', ogImage = '/image.png' } = Astro.props;
+const { title, description = '', lang = 'en', ogImage = '/image.png', alternates } = Astro.props;
 
-// Canonical URL for the current page, plus the en/es alternates for hreflang.
-const canonical = new URL(Astro.url.pathname, SITE_URL).href;
-const enUrl = new URL('/', SITE_URL).href;
-const esUrl = new URL('/es', SITE_URL).href;
-const ogImageUrl = new URL(ogImage, SITE_URL).href;
+// Canonical + hreflang URLs. The English site lives at `/`, the Spanish at `/es`.
+const site = Astro.site ?? new URL('https://defriction.org');
+const canonical = new URL(Astro.url.pathname, site).href;
+const enUrl = new URL(alternates?.en ?? '/', site).href;
+const esUrl = new URL(alternates?.es ?? '/es', site).href;
+const ogImageUrl = new URL(ogImage, site).href;
+
+import '../styles/global.css';
 ---
 
 <!DOCTYPE html>
-<html class="light" lang={lang}>
+<html lang={lang}>
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Set theme before paint to avoid a flash of the wrong color scheme. -->
+    <script is:inline>
+        (() => {
+            const stored = localStorage.getItem('theme');
+            const dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.classList.toggle('dark', dark);
+        })();
+    </script>
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <!-- Localized alternates -->
     <link rel="alternate" hreflang="en" href={enUrl} />
     <link rel="alternate" hreflang="es" href={esUrl} />
     <link rel="alternate" hreflang="x-default" href={enUrl} />

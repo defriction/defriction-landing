@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://defriction.org/sitemap-index.xml

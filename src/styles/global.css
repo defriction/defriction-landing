@@ -1,59 +1,92 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-.glass-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+/* Enable class-based dark mode (`<html class="dark">`). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Design tokens — ported from the previous inline `tailwind.config`.
+ * These generate utilities like `bg-primary`, `text-text-muted`,
+ * `shadow-soft`, `font-display`, etc.
+ */
+@theme {
+  --color-primary: #00A896;
+  --color-primary-dark: #008c7a;
+  --color-accent: #FF7F50;
+  --color-accent-dark: #ff6633;
+  --color-background-light: #F7F9FB;
+  --color-background-soft: #f7f9fb;
+  --color-background-dark: #111c21;
+  --color-surface-light: #ffffff;
+  --color-surface-dark: #1e293b;
+  --color-text-main: #2D3436;
+  --color-text-muted: #6c7d82;
+
+  --font-display: "Manrope", sans-serif;
+
+  --radius: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --shadow-glow: 0 0 40px -10px rgba(71, 180, 235, 0.2);
+
+  --animate-float: float 4s ease-in-out infinite;
 }
 
-.blob-bg {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(230, 230, 250, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
-    border-radius: 50%;
-    z-index: 0;
-    pointer-events: none;
-}
-
+/* Keyframes referenced by arbitrary `animate-[…]` utilities in the markup. */
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+@keyframes moveDown {
+  0% { top: -50%; opacity: 0; }
+  50% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
 }
 
-@keyframes moveDown {
-    0% { top: -50%; opacity: 0; }
-    50% { opacity: 1; }
-    100% { top: 100%; opacity: 0; }
+/* Component/global styles previously inlined in the document head. */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.blob-bg {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(230, 230, 250, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* Legal / long-form prose */
 .legal-prose h2 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
-    color: #2D3436;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: #2D3436;
 }
 .legal-prose p,
 .legal-prose li {
-    color: #4b5563;
-    line-height: 1.7;
-    margin-bottom: 0.75rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
 }
 .legal-prose ul {
-    list-style: disc;
-    padding-left: 1.5rem;
-    margin-bottom: 1rem;
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
 }
-.legal-prose a {
-    color: #00A896;
-    text-decoration: underline;
-}
-.legal-prose strong {
-    color: #2D3436;
-}
+.legal-prose a { color: #00A896; text-decoration: underline; }
+.legal-prose strong { color: #2D3436; }
+
+.dark .legal-prose h2,
+.dark .legal-prose strong { color: #ffffff; }
+.dark .legal-prose p,
+.dark .legal-prose li { color: #9ca3af; }
