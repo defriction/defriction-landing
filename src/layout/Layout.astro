@@ -8,7 +8,7 @@ interface Props {
 	alternates?: { en: string; es: string };
 }
 
-const { title, description = '', lang = 'en', ogImage = '/image.png', alternates } = Astro.props;
+const { title, description = '', lang = 'en', ogImage = '/logo.svg', alternates } = Astro.props;
 
 // Canonical + hreflang URLs. The English site lives at `/`, the Spanish at `/es`.
 const site = Astro.site ?? new URL('https://defriction.org');
