@@ -55,7 +55,7 @@ const demoCtas = [
       {data.tags.length > 0 && (
         <div class="flex flex-wrap gap-2 mb-8">
           {data.tags.map((tag) => (
-            <span class="text-xs font-bold uppercase tracking-wider text-[var(--brand)] bg-[var(--brand-soft)] px-3 py-1 rounded-full">{tag}</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-[var(--brand)] bg-[var(--brand-soft)] px-3 py-1 rounded-full">{tag[lang]}</span>
           ))}
         </div>
       )}
@@ -153,9 +153,9 @@ const demoCtas = [
     </section>
   )}
 
-  <!-- Technical notes + MVP scope (sober) -->
+  <!-- Sober info blocks. Full width when only one is present. -->
   {(data.techNotes.length > 0 || data.honestScope.length > 0) && (
-    <section class="grid md:grid-cols-2 gap-8 mb-16 text-sm">
+    <section class:list={["grid gap-8 mb-16 text-sm", data.techNotes.length > 0 && data.honestScope.length > 0 ? "md:grid-cols-2" : "grid-cols-1"]}>
       {data.techNotes.length > 0 && (
         <div class="bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700 rounded-xl p-6">
           <h2 class="text-base font-bold text-text-main dark:text-white mb-3">{t.techNotesTitle}</h2>

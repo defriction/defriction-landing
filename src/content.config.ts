@@ -26,7 +26,7 @@ const products = defineCollection({
       differentiators: z.array(bilingual).default([]),
       techNotes: z.array(bilingual).default([]),
       honestScope: z.array(bilingual).default([]),
-      tags: z.array(z.string()).default([]),
+      tags: z.array(bilingual).default([]),
       // Optional per-product brand colors for the detail page. Falls back to the
       // site theme when omitted, so each product can carry its own identity.
       brand: z

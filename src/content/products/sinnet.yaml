@@ -8,30 +8,28 @@ name:
   es: Sinnet App
 
 tagline:
-  en: Tennis tournament management, end to end.
-  es: Gestor de torneos de tenis, de punta a punta.
+  en: The professional way to run your tennis tournaments.
+  es: La forma profesional de organizar tus torneos de tenis.
 
 hero:
   headline:
     en: "Your tennis tournament, from registration to champion — all in one place."
     es: "Tu torneo de tenis, de la inscripción al campeón — en un solo lugar."
   subtitle:
-    en: "The platform for clubs and academies that automates registrations, payments, court scheduling, live scoring and a public results portal. In Spanish, built for Colombia."
-    es: "La plataforma para clubes y academias que automatiza inscripciones, pagos, programación de canchas, puntajes en vivo y un portal público de resultados. En español, pensada para Colombia."
+    en: "The platform clubs and academies use to take their tournaments to the next level: registrations, payments, court scheduling, live scoring and a public portal where players and fans follow every match. In Spanish, built for Colombia."
+    es: "La plataforma con la que clubes y academias llevan sus torneos a otro nivel: inscripciones, pagos, programación de canchas, puntajes en vivo y un portal público para que jugadores y aficionados sigan cada partido. En español y pensada para Colombia."
 
 overview:
-  en: "A multi-tenant SaaS for tennis clubs and academies to run tournaments from start to finish: online registration and payment, automatic match generation, court scheduling, live scoring and a public results portal. A modern web app (SPA), installable on mobile (PWA), fully in Spanish (Colombia, es-CO)."
-  es: "SaaS multi-tenant para que clubes y academias de tenis organicen torneos de principio a fin: inscripción y pago en línea, generación automática de partidos, programación de canchas, puntajes en vivo y un portal público de resultados. App web moderna (SPA), instalable en el móvil (PWA), totalmente en español (Colombia, es-CO)."
+  en: "Sinnet App brings everything a tennis tournament involves into one place: from player registration and payment to court scheduling, live scoring and public results. It replaces spreadsheets, WhatsApp groups and hand-drawn brackets with an organized, professional experience that everyone can follow — right from your phone, all tournament long."
+  es: "Sinnet App reúne en un solo lugar todo lo que implica organizar un torneo de tenis: desde la inscripción y el pago de los jugadores, hasta la programación de canchas, el marcador en vivo y los resultados públicos. Reemplaza las hojas de cálculo, los grupos de WhatsApp y los cuadros hechos a mano por una experiencia ordenada y profesional que todos pueden seguir — desde tu celular, durante todo el torneo."
 
 audiences:
-  - en: "Clubs / academies (admins): organize and run tournaments."
-    es: "Clubes / academias (administradores): organizan y operan torneos."
-  - en: "Players: register, pay and follow their matches."
-    es: "Jugadores: se inscriben, pagan y siguen sus partidos."
-  - en: "Spectators / public: follow tournaments live without logging in."
-    es: "Espectadores / público: siguen los torneos en vivo sin iniciar sesión."
-  - en: "Platform operator (super admin): manages every club from a single place."
-    es: "Operador de la plataforma (super admin): gestiona todos los clubes desde un solo lugar."
+  - en: "Clubs & academies: organize and run professional tournaments without the usual manual hassle."
+    es: "Clubes y academias: organizan y operan torneos profesionales sin el trabajo manual de siempre."
+  - en: "Players: register, pay and follow their matches from their phone."
+    es: "Jugadores: se inscriben, pagan y siguen sus partidos desde el celular."
+  - en: "Fans & families: follow every tournament live, with no account needed."
+    es: "Aficionados y familias: siguen cada torneo en vivo, sin necesidad de crear cuenta."
 
 features:
   - icon: app_registration
@@ -39,92 +37,90 @@ features:
       en: "Online registration & payments"
       es: "Inscripción y pagos en línea"
     desc:
-      en: "Step-by-step guided registration, with payment via Nequi or cash (COP). We record payments and link receipts."
-      es: "Inscripción guiada por pasos, con pago en Nequi o efectivo (COP). Registramos pagos y enlazamos comprobantes."
+      en: "Guided, step-by-step sign-up with payment via Nequi or cash (COP). Every payment is recorded and its receipt linked."
+      es: "Inscripción guiada paso a paso, con pago por Nequi o efectivo (COP). Cada pago queda registrado y con su comprobante enlazado."
   - icon: auto_awesome
     title:
       en: "Automatic match generation"
       es: "Generación automática de partidos"
     desc:
-      en: "Create categories and let the system build the full round-robin from your registered players."
-      es: "Crea categorías y deja que el sistema arme el round-robin completo a partir de tus inscritos."
+      en: "Create your categories and let the system build the full round-robin from your registered players — no manual pairing."
+      es: "Crea tus categorías y deja que el sistema arme el round-robin completo a partir de tus inscritos — sin emparejar a mano."
   - icon: calendar_view_week
     title:
       en: "Visual court scheduling"
       es: "Programación visual de canchas"
     desc:
-      en: "Drag and drop matches onto each court and time slot, with conflict detection and one-click publishing."
-      es: "Arrastra y suelta partidos en cada cancha y horario, con detección de conflictos y publicación en un clic."
+      en: "Place matches on each court and time slot by dragging them into place, with conflict detection and one-tap publishing."
+      es: "Ubica los partidos en cada cancha y horario arrastrándolos a su lugar, con detección de conflictos y publicación en un toque."
   - icon: scoreboard
     title:
       en: "Live scoring"
       es: "Puntajes en vivo"
     desc:
-      en: "Capture set by set with tiebreaks, per-match timers and an \"In play & queue\" board per court."
-      es: "Captura set por set con tiebreaks, cronómetros por partido y un tablero \"En juego y cola\" por cancha."
+      en: "Capture the score set by set, including tiebreaks, with per-match timers and an \"in play & up next\" board for every court."
+      es: "Captura el marcador set por set, con tiebreaks, cronómetros por partido y un tablero de \"en juego y por jugar\" para cada cancha."
   - icon: account_tree
     title:
       en: "Group stage & automatic brackets"
       es: "Fase de grupos y cuadros automáticos"
     desc:
-      en: "Close the group stage per category, resolve tiebreakers and generate the knockout bracket instantly."
-      es: "Cierra la fase de grupos por categoría, resuelve desempates y genera el cuadro de eliminación al instante."
+      en: "Close the group stage by category, resolve tiebreakers and generate the knockout bracket instantly."
+      es: "Cierra la fase de grupos por categoría, resuelve los desempates y genera el cuadro de eliminación al instante."
   - icon: public
     title:
-      en: "Public portal, no login"
-      es: "Portal público sin login"
+      en: "Public results portal"
+      es: "Portal público de resultados"
     desc:
-      en: "Live, upcoming, group stage, results and bracket — everything players and the public follow with a link."
-      es: "En vivo, próximos, fase de grupos, resultados y bracket — todo lo que jugadores y público siguen con un link."
+      en: "Live, upcoming, group stage, results and bracket — everything players and fans follow with a single link, no account needed."
+      es: "En vivo, próximos, fase de grupos, resultados y cuadro — todo lo que jugadores y aficionados siguen con un solo enlace, sin crear cuenta."
 
 supportFeatures:
-  - en: "Master player database"
-    es: "Base maestra de jugadores"
-  - en: "Payments dashboard"
-    es: "Dashboard de pagos"
-  - en: "Public club directory (/clubs)"
-    es: "Directorio público de clubes (/clubs)"
+  - en: "Player profiles & history"
+    es: "Perfiles e historial de jugadores"
+  - en: "Payments overview"
+    es: "Resumen de pagos"
+  - en: "Public club directory"
+    es: "Directorio público de clubes"
   - en: "One-tap WhatsApp contact"
     es: "Contacto por WhatsApp en un toque"
 
 differentiators:
-  - en: "End to end, not scattered tools: registration → payment → generation → scheduling → scoring → public results, in one product."
-    es: "De punta a punta, no soluciones sueltas: inscripción → pago → generación → programación → puntajes → resultados públicos, en un solo producto."
-  - en: "Automates the tedious parts: round-robin, standings/tiebreakers and bracket creation are computed for you."
-    es: "Automatiza lo tedioso: round-robin, posiciones/desempates y creación de cuadros se calculan por ti."
-  - en: "Real-time, public experience: scores, timers, brackets and tables anyone follows with a link."
-    es: "Experiencia en tiempo real y pública: puntajes, cronómetros, cuadros y tablas que cualquiera sigue con un link."
-  - en: "Multi-tenant by design: each club's data is isolated; one platform serves many academies."
-    es: "Multi-tenant por diseño: los datos de cada club están aislados; una plataforma sirve a muchas academias."
-  - en: "Built for mobile: installable PWA, responsive, native to Colombian payments (Nequi/cash, COP)."
-    es: "Pensado para el móvil: PWA instalable, responsive, nativo para pagos colombianos (Nequi/efectivo, COP)."
-  - en: "Polished, consistent UI: per-category color and a minimalist design language across every view."
-    es: "UI pulida y consistente: color por categoría y lenguaje de diseño minimalista en todas las vistas."
+  - en: "Everything in one place: from registration to champion, without juggling tools, spreadsheets or chats."
+    es: "Todo en un solo lugar: de la inscripción al campeón, sin saltar entre herramientas, hojas de cálculo ni chats."
+  - en: "The system handles the tedious part: it builds the groups, computes standings and tiebreakers, and creates the brackets for you."
+    es: "El sistema se encarga de lo tedioso: arma los grupos, calcula posiciones y desempates, y crea los cuadros por ti."
+  - en: "Live and for everyone: players and fans follow scores, brackets and standings in real time with just a link."
+    es: "En vivo y para todos: jugadores y aficionados siguen marcadores, cuadros y posiciones en tiempo real con solo un enlace."
+  - en: "A professional image for your academy: clean, public results that make your tournaments look the part."
+    es: "Una imagen profesional para tu academia: resultados públicos y prolijos que hacen que tus torneos se vean a la altura."
+  - en: "Ready for tournament day: run everything from your phone, courtside, as it happens."
+    es: "Listo para el día del torneo: maneja todo desde tu celular, en la cancha, mientras sucede."
+  - en: "Made for Colombia: payments with Nequi or cash, everything in Spanish."
+    es: "Hecho para Colombia: pagos con Nequi o efectivo, y todo en español."
 
-techNotes:
-  - en: "SPA in Angular (signals, reactive state), installable PWA, es-CO localization across the whole app, REST backend."
-    es: "SPA en Angular (signals, estado reactivo), PWA instalable, localización es-CO en toda la app, backend REST."
-  - en: "Tournament lifecycle: draft → registrations open → in progress → finished."
-    es: "Ciclo de vida del torneo: borrador → inscripciones abiertas → en curso → finalizado."
+techNotes: []
 
 honestScope:
-  - en: "Payments: Nequi and cash (COP). NOT a payment gateway: it records payments and links receipts (it does not process transactions)."
-    es: "Pagos: Nequi y efectivo (COP). NO es pasarela de pago: registra pagos y enlaza comprobantes (no procesa transacciones)."
-  - en: "Public portal without login."
-    es: "Portal público sin login."
-  - en: "WhatsApp contact = a click-to-open link, not automated messaging (that's roadmap)."
-    es: "Contacto por WhatsApp = enlace para abrir (click-to-open), no mensajería automatizada (eso es roadmap)."
-  - en: "Avoids promising automatic SMS/email or payment processing."
-    es: "Evita prometer SMS/correo automáticos o procesamiento de pagos."
+  - en: "Payments with Nequi or cash (COP): you record each one and link its receipt, so you keep full control and a clear history."
+    es: "Pagos con Nequi o efectivo (COP): registras cada uno y enlazas su comprobante, para que tengas control total y un historial claro."
+  - en: "An open public portal anyone can follow without creating an account."
+    es: "Un portal público y abierto que cualquiera puede seguir sin crear cuenta."
+  - en: "One-tap WhatsApp to coordinate schedules directly with your players."
+    es: "WhatsApp en un toque para coordinar horarios directamente con tus jugadores."
 
 tags:
-  - Angular
-  - PWA
-  - Multi-tenant
-  - es-CO
-  - Tenis
+  - en: "Tennis tournaments"
+    es: "Torneos de tenis"
+  - en: "Clubs & academies"
+    es: "Clubes y academias"
+  - en: "Live results"
+    es: "Resultados en vivo"
+  - en: "Registration & payments"
+    es: "Inscripciones y pagos"
+  - en: "Made in Colombia"
+    es: "Hecho en Colombia"
 
-# Sinnet's own brand colors (tennis green + blue accent), per defriction brand spec.
 brand:
   color: "#2E7D32"
   colorDark: "#1B5E20"
