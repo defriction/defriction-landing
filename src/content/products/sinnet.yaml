@@ -37,8 +37,8 @@ features:
       en: "Online registration & payments"
       es: "Inscripción y pagos en línea"
     desc:
-      en: "Guided, step-by-step sign-up with payment via Nequi or cash (COP). Every payment is recorded and its receipt linked."
-      es: "Inscripción guiada paso a paso, con pago por Nequi o efectivo (COP). Cada pago queda registrado y con su comprobante enlazado."
+      en: "Guided, step-by-step sign-up with payment via Nequi, bank transfer or cash (COP). Every payment is recorded and its receipt linked."
+      es: "Inscripción guiada paso a paso, con pago por Nequi, transferencia bancaria o efectivo (COP). Cada pago queda registrado y con su comprobante enlazado."
     image: ../../assets/products/sinnet/04.png
   - icon: groups
     title:
@@ -142,8 +142,8 @@ benefits:
 techNotes: []
 
 honestScope:
-  - en: "Payments with Nequi or cash (COP): you record each one and link its receipt, so you keep full control and a clear history."
-    es: "Pagos con Nequi o efectivo (COP): registras cada uno y enlazas su comprobante, para que tengas control total y un historial claro."
+  - en: "Payments with Nequi, bank transfer or cash (COP): you record each one and link its receipt, so you keep full control and a clear history."
+    es: "Pagos con Nequi, transferencia bancaria o efectivo (COP): registras cada uno y enlazas su comprobante, para que tengas control total y un historial claro."
   - en: "An open public portal anyone can follow without creating an account."
     es: "Un portal público y abierto que cualquiera puede seguir sin crear cuenta."
   - en: "One-tap WhatsApp to coordinate schedules directly with your players."
