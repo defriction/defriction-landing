@@ -124,19 +124,33 @@ const finalButtons =
     </section>
   )}
 
-  <!-- Features -->
+  <!-- Features: alternating rows, each backed by a screenshot (zig-zag) -->
   {data.features.length > 0 && (
     <section class="mb-16">
-      <h2 class="text-2xl font-bold text-text-main dark:text-white mb-6">{t.featuresTitle}</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {data.features.map((f) => (
-          <div class="bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-            <div class="size-11 rounded-lg bg-[var(--brand-soft)] text-[var(--brand)] flex items-center justify-center mb-4">
-              <span class="material-symbols-outlined" aria-hidden="true">{f.icon}</span>
+      <h2 class="text-2xl font-bold text-text-main dark:text-white mb-10">{t.featuresTitle}</h2>
+      <div class="space-y-16 lg:space-y-24">
+        {data.features.map((f, i) => (
+          f.image ? (
+            <div class:list={["grid md:grid-cols-2 gap-8 lg:gap-12 items-center", i % 2 === 1 && "md:[&>*:first-child]:order-2"]}>
+              <Image src={f.image} alt={f.title[lang]} widths={[640, 1024, 1600]} sizes="(min-width: 768px) 50vw, 100vw" loading="lazy"
+                class="w-full rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700" />
+              <div>
+                <div class="size-11 rounded-lg bg-[var(--brand-soft)] text-[var(--brand)] flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined" aria-hidden="true">{f.icon}</span>
+                </div>
+                <h3 class="text-xl lg:text-2xl font-bold text-text-main dark:text-white mb-3">{f.title[lang]}</h3>
+                <p class="text-text-muted dark:text-gray-400 leading-relaxed">{f.desc[lang]}</p>
+              </div>
             </div>
-            <h3 class="text-lg font-bold text-text-main dark:text-white mb-2">{f.title[lang]}</h3>
-            <p class="text-sm text-text-muted dark:text-gray-400 leading-relaxed">{f.desc[lang]}</p>
-          </div>
+          ) : (
+            <div class="max-w-2xl">
+              <div class="size-11 rounded-lg bg-[var(--brand-soft)] text-[var(--brand)] flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined" aria-hidden="true">{f.icon}</span>
+              </div>
+              <h3 class="text-xl lg:text-2xl font-bold text-text-main dark:text-white mb-3">{f.title[lang]}</h3>
+              <p class="text-text-muted dark:text-gray-400 leading-relaxed">{f.desc[lang]}</p>
+            </div>
+          )
         ))}
       </div>
     </section>
@@ -172,42 +186,7 @@ const finalButtons =
     </section>
   )}
 
-  <!-- Gallery carousel (one near-full-screen slide at a time) -->
-  {data.gallery && data.gallery.length > 0 && (
-    <section class="mb-16">
-      <h2 class="text-2xl font-bold text-text-main dark:text-white mb-6">{t.galleryTitle}</h2>
-      <!-- full-bleed wrapper (body has overflow-x-hidden, so w-screen is safe) -->
-      <div class="relative left-1/2 right-1/2 -mx-[50vw] w-screen">
-        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8" data-gallery role="region" aria-roledescription="carousel" aria-label={t.galleryTitle}>
-          <div class="relative">
-            <div data-gallery-track tabindex="0" class="flex snap-x snap-mandatory overflow-x-auto overflow-y-hidden scroll-smooth no-scrollbar rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)]">
-              {data.gallery.map((g) => (
-                <figure data-gallery-slide class="snap-center shrink-0 w-full relative">
-                  <Image src={g.src} alt={`${data.name[lang]} — ${g.caption[lang]}`} widths={[768, 1280, 1920, 2560]} sizes="(min-width: 1400px) 1400px, 100vw" loading="lazy" class="block w-full aspect-[16/10] object-cover" />
-                  <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/35 to-transparent text-white text-sm sm:text-lg font-medium px-5 sm:px-8 pt-10 pb-5 sm:pb-7">
-                    {g.caption[lang]}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-            <button type="button" data-gallery-prev aria-label={t.galleryPrev} class="absolute left-3 top-1/2 -translate-y-1/2 size-11 rounded-full bg-white/90 hover:bg-white text-text-main shadow-lg flex items-center justify-center transition">
-              <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
-            </button>
-            <button type="button" data-gallery-next aria-label={t.galleryNext} class="absolute right-3 top-1/2 -translate-y-1/2 size-11 rounded-full bg-white/90 hover:bg-white text-text-main shadow-lg flex items-center justify-center transition">
-              <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
-            </button>
-          </div>
-          <div class="flex justify-center gap-2.5 mt-5">
-            {data.gallery.map((g, i) => (
-              <button type="button" data-gallery-dot class="gallery-dot" aria-current={i === 0 ? 'true' : 'false'} aria-label={`${t.galleryTitle}: ${g.caption[lang]}`}></button>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  )}
-
-  <!-- Public portal invite (below the gallery) -->
+  <!-- Public portal invite (below the features) -->
   {isLink(ctas?.liveUrl) && (
     <section class="text-center mb-16">
       <p class="text-text-muted dark:text-gray-400 max-w-2xl mx-auto mb-5">{t.galleryPortalNote}</p>
@@ -255,44 +234,3 @@ const finalButtons =
     </section>
   )}
 </main>
-
-<script>
-  // Gallery carousel: arrows, dots, keyboard and native swipe (CSS scroll-snap).
-  document.querySelectorAll('[data-gallery]').forEach((root) => {
-    const track = root.querySelector('[data-gallery-track]');
-    const slides = Array.from(root.querySelectorAll('[data-gallery-slide]'));
-    const dots = Array.from(root.querySelectorAll('[data-gallery-dot]'));
-    const prev = root.querySelector('[data-gallery-prev]');
-    const next = root.querySelector('[data-gallery-next]');
-    if (!track || slides.length === 0) return;
-
-    let current = 0;
-    const go = (i) => {
-      current = Math.max(0, Math.min(slides.length - 1, i));
-      slides[current].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-    };
-
-    prev?.addEventListener('click', () => go(current - 1));
-    next?.addEventListener('click', () => go(current + 1));
-    dots.forEach((dot, i) => dot.addEventListener('click', () => go(i)));
-    track.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') { e.preventDefault(); go(current - 1); }
-      if (e.key === 'ArrowRight') { e.preventDefault(); go(current + 1); }
-    });
-
-    // Keep the active dot in sync with whichever slide is centered.
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          const i = slides.indexOf(entry.target);
-          if (i < 0) return;
-          current = i;
-          dots.forEach((dot, j) => dot.setAttribute('aria-current', j === i ? 'true' : 'false'));
-        });
-      },
-      { root: track, threshold: 0.6 }
-    );
-    slides.forEach((slide) => io.observe(slide));
-  });
-</script>

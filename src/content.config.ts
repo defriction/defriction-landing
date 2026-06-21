@@ -20,7 +20,15 @@ const products = defineCollection({
       overview: bilingual,
       audiences: z.array(bilingual).default([]),
       features: z
-        .array(z.object({ title: bilingual, desc: bilingual, icon: z.string() }))
+        .array(
+          z.object({
+            title: bilingual,
+            desc: bilingual,
+            icon: z.string(),
+            // Each feature can carry a screenshot that backs it up (zig-zag rows).
+            image: image().optional(),
+          })
+        )
         .default([]),
       supportFeatures: z.array(bilingual).default([]),
       differentiators: z.array(bilingual).default([]),

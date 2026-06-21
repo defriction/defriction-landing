@@ -39,6 +39,15 @@ features:
     desc:
       en: "Guided, step-by-step sign-up with payment via Nequi or cash (COP). Every payment is recorded and its receipt linked."
       es: "Inscripción guiada paso a paso, con pago por Nequi o efectivo (COP). Cada pago queda registrado y con su comprobante enlazado."
+    image: ../../assets/products/sinnet/04.png
+  - icon: groups
+    title:
+      en: "Player database"
+      es: "Base de jugadores"
+    desc:
+      en: "Profiles, stats and a reliability score for every player — searchable and always up to date."
+      es: "Perfiles, estadísticas y un índice de confiabilidad de cada jugador — buscable y siempre al día."
+    image: ../../assets/products/sinnet/09.png
   - icon: auto_awesome
     title:
       en: "Automatic match generation"
@@ -46,6 +55,7 @@ features:
     desc:
       en: "Create your categories and let the system build the full round-robin from your registered players — no manual pairing."
       es: "Crea tus categorías y deja que el sistema arme el round-robin completo a partir de tus inscritos — sin emparejar a mano."
+    image: ../../assets/products/sinnet/01.png
   - icon: calendar_view_week
     title:
       en: "Visual court scheduling"
@@ -53,6 +63,7 @@ features:
     desc:
       en: "Place matches on each court and time slot by dragging them into place, with conflict detection and one-tap publishing."
       es: "Ubica los partidos en cada cancha y horario arrastrándolos a su lugar, con detección de conflictos y publicación en un toque."
+    image: ../../assets/products/sinnet/02.png
   - icon: scoreboard
     title:
       en: "Live scoring"
@@ -60,6 +71,7 @@ features:
     desc:
       en: "Capture the score set by set, including tiebreaks, with per-match timers and an \"in play & up next\" board for every court."
       es: "Captura el marcador set por set, con tiebreaks, cronómetros por partido y un tablero de \"en juego y por jugar\" para cada cancha."
+    image: ../../assets/products/sinnet/03.png
   - icon: account_tree
     title:
       en: "Group stage & automatic brackets"
@@ -67,6 +79,7 @@ features:
     desc:
       en: "Close the group stage by category, resolve tiebreakers and generate the knockout bracket instantly."
       es: "Cierra la fase de grupos por categoría, resuelve los desempates y genera el cuadro de eliminación al instante."
+    image: ../../assets/products/sinnet/08.png
   - icon: public
     title:
       en: "Public results portal"
@@ -74,6 +87,7 @@ features:
     desc:
       en: "Live, upcoming, group stage, results and bracket — everything players and fans follow with a single link, no account needed."
       es: "En vivo, próximos, fase de grupos, resultados y cuadro — todo lo que jugadores y aficionados siguen con un solo enlace, sin crear cuenta."
+    image: ../../assets/products/sinnet/10.png
 
 supportFeatures:
   - en: "Player profiles & history"
@@ -127,27 +141,6 @@ brand:
   accent: "#1976D2"
 
 image: ../../assets/products/sinnet/hero.png
-gallery:
-  - src: ../../assets/products/sinnet/05.png
-    caption: { en: "Create the tournament, its categories and entry fees.", es: "Crea el torneo, sus categorías y tarifas de inscripción." }
-  - src: ../../assets/products/sinnet/09.png
-    caption: { en: "Player profiles, history and reliability, all in one place.", es: "Perfiles, historial y confiabilidad de tus jugadores, en un solo lugar." }
-  - src: ../../assets/products/sinnet/04.png
-    caption: { en: "Track registrations and confirmed payments.", es: "Controla las inscripciones y los pagos confirmados." }
-  - src: ../../assets/products/sinnet/06.png
-    caption: { en: "Set up your courts and their availability.", es: "Configura tus canchas y su disponibilidad." }
-  - src: ../../assets/products/sinnet/01.png
-    caption: { en: "Automatically generate the groups from your registered players.", es: "Genera los grupos automáticamente a partir de tus inscritos." }
-  - src: ../../assets/products/sinnet/02.png
-    caption: { en: "Drag and schedule matches across courts and time slots.", es: "Arrastra y programa los partidos por cancha y horario." }
-  - src: ../../assets/products/sinnet/03.png
-    caption: { en: "Follow what's in play, court by court, in real time.", es: "Sigue lo que está en juego, cancha por cancha, en tiempo real." }
-  - src: ../../assets/products/sinnet/07.png
-    caption: { en: "Capture the score set by set, with tiebreaks and super tie-breaks.", es: "Captura el marcador set por set, con tiebreaks y super tie-break." }
-  - src: ../../assets/products/sinnet/08.png
-    caption: { en: "Group standings and tiebreakers, computed for you.", es: "Tablas de posiciones y desempates, calculados por ti." }
-  - src: ../../assets/products/sinnet/10.png
-    caption: { en: "Public results anyone can follow with a single link.", es: "Resultados públicos que cualquiera sigue con un solo enlace." }
 
 ctas:
   demoUrl: "mailto:defriction@defriction.org?subject=Quiero%20unir%20mi%20academia%20a%20Sinnet%20App"
