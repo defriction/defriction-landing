@@ -1,0 +1,35 @@
+---
+import { ui } from '../i18n/ui';
+const { lang = 'en' } = Astro.props;
+const t = ui[lang as keyof typeof ui].about;
+---
+<section id="about" class="py-24 bg-white dark:bg-background-dark border-y border-[#e7eff3] dark:border-gray-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="max-w-3xl mb-14">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-semibold text-primary uppercase tracking-wider mb-5">
+                <span class="size-2 rounded-full bg-accent"></span>
+                {t.label}
+            </div>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-text-main dark:text-white mb-5 leading-tight">{t.title}</h2>
+            <p class="text-lg text-text-muted dark:text-gray-400 leading-relaxed">{t.intro}</p>
+        </div>
+        <!-- Mission / Vision -->
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-background-soft dark:bg-surface-dark border border-gray-100 dark:border-gray-700 rounded-2xl p-8 shadow-sm">
+                <div class="size-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-5">
+                    <span class="material-symbols-outlined text-2xl" aria-hidden="true">rocket_launch</span>
+                </div>
+                <h3 class="text-xl font-bold text-text-main dark:text-white mb-3">{t.missionTitle}</h3>
+                <p class="text-text-muted dark:text-gray-400 leading-relaxed">{t.mission}</p>
+            </div>
+            <div class="bg-background-soft dark:bg-surface-dark border border-gray-100 dark:border-gray-700 rounded-2xl p-8 shadow-sm">
+                <div class="size-12 rounded-lg bg-accent/10 text-accent flex items-center justify-center mb-5">
+                    <span class="material-symbols-outlined text-2xl" aria-hidden="true">visibility</span>
+                </div>
+                <h3 class="text-xl font-bold text-text-main dark:text-white mb-3">{t.visionTitle}</h3>
+                <p class="text-text-muted dark:text-gray-400 leading-relaxed">{t.vision}</p>
+            </div>
+        </div>
+    </div>
+</section>

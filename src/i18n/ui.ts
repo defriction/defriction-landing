@@ -10,7 +10,7 @@ export const ui = {
       title: 'defriction — Automation & Digital Products That Scale',
       description: 'We automate repetitive work and connect the tools you already use — turning manual processes into automated flows, with AI where it counts.'
     },
-    nav: { services: 'Services', process: 'Process', products: 'Products', caseStudies: 'Work', book: 'Book a Call' },
+    nav: { services: 'Services', process: 'Process', about: 'About', products: 'Products', caseStudies: 'Work', book: 'Book a Call' },
     hero: {
       badge: 'Now booking new clients for Q3 2026',
       titleStart: 'Turn Chaos into',
@@ -52,6 +52,15 @@ export const ui = {
       week2: 'Week 2',
       week34: 'Week 3-4',
       ongoing: 'Ongoing'
+    },
+    about: {
+      label: 'About us',
+      title: 'We remove the friction between you and your growth',
+      intro: 'defriction exists to close the gap between the tools businesses use and the potential they leave on the table. We pair no-code speed with real engineering to diagnose processes, automate the repetitive, and build custom digital products — like Sinnet, our tennis tournament platform. We work from Colombia for teams that want to scale without multiplying their operational load.',
+      missionTitle: 'Our mission',
+      mission: 'Turn manual, repetitive work into automated systems — so teams spend their energy growing, not operating.',
+      visionTitle: 'Our vision',
+      vision: 'A future where any business, whatever its size, runs with the efficiency of a top tech company — with automation and AI within reach.'
     },
     metrics: {
       saved: 'Weekly hours saved per client',
@@ -151,7 +160,7 @@ export const ui = {
       title: 'defriction — Automatización y Productos Digitales que Escalan',
       description: 'Automatizamos el trabajo repetitivo y conectamos las herramientas que ya usas — convirtiendo procesos manuales en flujos automáticos, con IA donde suma.'
     },
-    nav: { services: 'Servicios', process: 'Proceso', products: 'Productos', caseStudies: 'Trabajo', book: 'Agendar Llamada' },
+    nav: { services: 'Servicios', process: 'Proceso', about: 'Nosotros', products: 'Productos', caseStudies: 'Trabajo', book: 'Agendar Llamada' },
     hero: {
       badge: 'Reservando nuevos clientes para Q3 2026',
       titleStart: 'Convierte el Caos en',
@@ -193,6 +202,15 @@ export const ui = {
       week2: 'Semana 2',
       week34: 'Semana 3-4',
       ongoing: 'Continuo'
+    },
+    about: {
+      label: 'Sobre nosotros',
+      title: 'Quitamos la fricción entre tú y tu crecimiento',
+      intro: 'defriction existe para cerrar la brecha entre las herramientas que las empresas usan y el potencial que no aprovechan. Combinamos la velocidad del no-code con ingeniería real para diagnosticar procesos, automatizar lo repetitivo y construir productos digitales a medida — como Sinnet, nuestra plataforma de torneos de tenis. Trabajamos desde Colombia para equipos que quieren escalar sin multiplicar su carga operativa.',
+      missionTitle: 'Nuestra misión',
+      mission: 'Convertir el trabajo manual y repetitivo en sistemas automáticos — para que los equipos dediquen su energía a crecer, no a operar.',
+      visionTitle: 'Nuestra visión',
+      vision: 'Un futuro donde cualquier empresa, sin importar su tamaño, opere con la eficiencia de una gran tecnológica — con automatización e IA a su alcance.'
     },
     metrics: {
       saved: 'Horas semanales ahorradas por cliente',
