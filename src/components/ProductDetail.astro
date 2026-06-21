@@ -156,6 +156,26 @@ const finalButtons =
     </section>
   )}
 
+  <!-- Benefits: concrete gains by area (time, communication, etc.) -->
+  {data.benefits.length > 0 && (
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-text-main dark:text-white mb-2">{t.benefitsTitle}</h2>
+      <p class="text-text-muted dark:text-gray-400 mb-8">{t.benefitsSubtitle}</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {data.benefits.map((b) => (
+          <div class="flex flex-col bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="size-11 rounded-lg bg-[var(--brand-soft)] text-[var(--brand)] flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined" aria-hidden="true">{b.icon}</span>
+            </div>
+            <h3 class="text-lg font-bold text-text-main dark:text-white mb-2">{b.area[lang]}</h3>
+            <p class="text-sm text-text-muted dark:text-gray-400 leading-relaxed mb-4 flex-1">{b.benefit[lang]}</p>
+            <span class="self-start text-xs font-bold uppercase tracking-wider text-[var(--brand)] bg-[var(--brand-soft)] px-2.5 py-1 rounded-full">{b.highlight[lang]}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
   <!-- Support features -->
   {data.supportFeatures.length > 0 && (
     <section class="mb-16">

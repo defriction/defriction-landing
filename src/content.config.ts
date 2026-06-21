@@ -32,6 +32,18 @@ const products = defineCollection({
         .default([]),
       supportFeatures: z.array(bilingual).default([]),
       differentiators: z.array(bilingual).default([]),
+      // Concrete gains by area (time saved, communication, etc.). Each carries a
+      // short qualitative highlight pill — no invented figures.
+      benefits: z
+        .array(
+          z.object({
+            icon: z.string(),
+            area: bilingual,
+            benefit: bilingual,
+            highlight: bilingual,
+          })
+        )
+        .default([]),
       techNotes: z.array(bilingual).default([]),
       honestScope: z.array(bilingual).default([]),
       tags: z.array(bilingual).default([]),

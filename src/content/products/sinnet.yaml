@@ -99,19 +99,45 @@ supportFeatures:
   - en: "One-tap WhatsApp contact"
     es: "Contacto por WhatsApp en un toque"
 
-differentiators:
-  - en: "Everything in one place: from registration to champion, without juggling tools, spreadsheets or chats."
-    es: "Todo en un solo lugar: de la inscripción al campeón, sin saltar entre herramientas, hojas de cálculo ni chats."
-  - en: "The system handles the tedious part: it builds the groups, computes standings and tiebreakers, and creates the brackets for you."
-    es: "El sistema se encarga de lo tedioso: arma los grupos, calcula posiciones y desempates, y crea los cuadros por ti."
-  - en: "Live and for everyone: players and fans follow scores, brackets and standings in real time with just a link."
-    es: "En vivo y para todos: jugadores y aficionados siguen marcadores, cuadros y posiciones en tiempo real con solo un enlace."
-  - en: "A professional image for your academy: clean, public results that make your tournaments look the part."
-    es: "Una imagen profesional para tu academia: resultados públicos y prolijos que hacen que tus torneos se vean a la altura."
-  - en: "Ready for tournament day: run everything from your phone, courtside, as it happens."
-    es: "Listo para el día del torneo: maneja todo desde tu celular, en la cancha, mientras sucede."
-  - en: "Made for Colombia: payments with Nequi or cash, everything in Spanish."
-    es: "Hecho para Colombia: pagos con Nequi o efectivo, y todo en español."
+differentiators: []
+
+benefits:
+  - icon: timer
+    area: { en: "Time saved", es: "Ahorro de tiempo" }
+    benefit:
+      en: "Set up the whole tournament in minutes — registrations, groups, scheduling and brackets — with no spreadsheets or hand-drawn draws."
+      es: "Arma todo el torneo en minutos — inscripciones, grupos, programación y cuadros — sin hojas de cálculo ni cuadros a mano."
+    highlight: { en: "Days → minutes", es: "Días → minutos" }
+  - icon: forum
+    area: { en: "Better communication", es: "Mejor comunicación" }
+    benefit:
+      en: "The public portal answers for you: players and fans check schedules, courts and results with a link — without messaging you on WhatsApp."
+      es: "El portal público responde por ti: jugadores y aficionados ven horarios, canchas y resultados con un link — sin escribirte por WhatsApp."
+    highlight: { en: "Fewer messages", es: "Menos WhatsApp" }
+  - icon: verified
+    area: { en: "No mistakes", es: "Cero errores" }
+    benefit:
+      en: "Standings, tiebreakers and brackets are computed automatically — no manual errors and no disputes from players."
+      es: "Posiciones, desempates y cuadros se calculan solos — sin errores manuales ni reclamos de los jugadores."
+    highlight: { en: "No disputes", es: "Sin reclamos" }
+  - icon: workspace_premium
+    area: { en: "Professional image", es: "Imagen profesional" }
+    benefit:
+      en: "Live scoring and a polished public portal make your club and your tournaments look top-tier."
+      es: "El marcador en vivo y un portal pulido hacen que tu club y tus torneos se vean a la altura de los grandes."
+    highlight: { en: "Pro-level", es: "Nivel profesional" }
+  - icon: payments
+    area: { en: "Payments under control", es: "Pagos bajo control" }
+    benefit:
+      en: "Know instantly who has paid and who hasn't, all recorded and reconciled by category."
+      es: "Sabes al instante quién pagó y quién falta, con todo registrado y conciliado por categoría."
+    highlight: { en: "Fully reconciled", es: "Todo conciliado" }
+  - icon: trending_up
+    area: { en: "Scale without hiring", es: "Escala sin contratar" }
+    benefit:
+      en: "With the manual work gone, you can run more tournaments and rankings with the same team."
+      es: "Al quitarte el trabajo manual, organizas más torneos y rankings con el mismo equipo."
+    highlight: { en: "More tournaments", es: "Más torneos" }
 
 techNotes: []
 
