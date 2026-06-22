@@ -34,6 +34,21 @@ import '../styles/global.css';
             document.documentElement.classList.toggle('dark', dark);
         })();
     </script>
+    <!-- Auto-detect browser language and redirect on first visit -->
+    <script is:inline>
+        (() => {
+            // Only redirect on the root English page, not if already on /es or subpages
+            if (window.location.pathname !== '/') return;
+            // Don't redirect if user already visited (they may have chosen English manually)
+            if (sessionStorage.getItem('lang-redirected')) return;
+            sessionStorage.setItem('lang-redirected', '1');
+            // Check browser language
+            const lang = navigator.language || navigator.userLanguage || 'en';
+            if (lang.startsWith('es')) {
+                window.location.replace('/es');
+            }
+        })();
+    </script>
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
