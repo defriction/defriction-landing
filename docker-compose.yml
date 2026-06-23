@@ -1,0 +1,28 @@
+services:
+  defriction_web:
+    build: .
+    container_name: defriction_landing
+    restart: always
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+
+      # Dominio principal
+      - "traefik.http.routers.defriction-landing.rule=Host(`defriction.org`) || Host(`www.defriction.org`)"
+      - "traefik.http.routers.defriction-landing.entrypoints=websecure"
+      - "traefik.http.routers.defriction-landing.tls=true"
+      - "traefik.http.routers.defriction-landing.tls.certresolver=mytlschallenge"
+
+      # Redirigir www → sin www
+      - "traefik.http.middlewares.defriction-www-redirect.redirectregex.regex=^https://www\\.defriction\\.org/(.*)"
+      - "traefik.http.middlewares.defriction-www-redirect.redirectregex.replacement=https://defriction.org/$${1}"
+      - "traefik.http.middlewares.defriction-www-redirect.redirectregex.permanent=true"
+      - "traefik.http.routers.defriction-landing.middlewares=defriction-www-redirect"
+
+      # Nginx internamente corre en el puerto 80
+      - "traefik.http.services.defriction-landing.loadbalancer.server.port=80"
+
+networks:
+  proxy:
+    external: true
