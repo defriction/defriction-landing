@@ -26,8 +26,8 @@ overview:
 audiences:
   - en: "Clubs & academies: organize and run professional tournaments without the usual manual hassle."
     es: "Clubes y academias: organizan y operan torneos profesionales sin el trabajo manual de siempre."
-  - en: "Players: register, pay and follow their matches from their phone."
-    es: "Jugadores: se inscriben, pagan y siguen sus partidos desde el celular."
+  - en: "Players: register and pay from their phone, then follow everything in their own space — next match, payment status, stats, achievements and match history."
+    es: "Jugadores: se inscriben y pagan desde el celular, y siguen todo en su propio espacio — próximo partido, estado de pago, estadísticas, logros e historial de partidos."
   - en: "Fans & families: follow every tournament live, with no account needed."
     es: "Aficionados y familias: siguen cada torneo en vivo, sin necesidad de crear cuenta."
 
@@ -40,14 +40,32 @@ features:
       en: "Guided, step-by-step sign-up with payment via Nequi, bank transfer or cash (COP). Every payment is recorded and its receipt linked."
       es: "Inscripción guiada paso a paso, con pago por Nequi, transferencia bancaria o efectivo (COP). Cada pago queda registrado y con su comprobante enlazado."
     image: ../../assets/products/sinnet/04.png
+  - icon: confirmation_number
+    title: { en: "Your tournament, flyer and all", es: "Tu torneo, con su propio flyer" }
+    desc:
+      en: "Give each tournament a branded flyer and let players sign up in seconds through a shareable link — with the tournament already selected."
+      es: "Dale a cada torneo un flyer con tu marca y deja que los jugadores se inscriban en segundos con un enlace — con el torneo ya seleccionado."
+    image: ../../assets/products/sinnet/12.png
   - icon: groups
     title:
       en: "Player database"
       es: "Base de jugadores"
     desc:
-      en: "Profiles, stats and a reliability score for every player — searchable and always up to date."
-      es: "Perfiles, estadísticas y un índice de confiabilidad de cada jugador — buscable y siempre al día."
+      en: "Profiles, stats and a reliability score (no-show history) for every player, so you know who shows up — searchable and always up to date."
+      es: "Perfiles, estadísticas y un índice de confiabilidad (historial de inasistencias) de cada jugador, para saber quién cumple — buscable y siempre al día."
     image: ../../assets/products/sinnet/09.png
+  - icon: account_circle
+    title: { en: "A space for every player", es: "Un espacio para cada jugador" }
+    desc:
+      en: "Each player gets their own panel: next match, their tournaments, payment status, stats and achievements — all in one place."
+      es: "Cada jugador tiene su propio panel: próximo partido, sus torneos, estado de pago, estadísticas y logros — todo en un solo lugar."
+    image: ../../assets/products/sinnet/11.png
+  - icon: history
+    title: { en: "Match history with scores", es: "Historial de partidos con marcadores" }
+    desc:
+      en: "Every player sees their full match history with set-by-set scores, wins and streaks."
+      es: "Cada jugador ve su historial completo con marcadores set por set, victorias y rachas."
+    image: ../../assets/products/sinnet/13.png
   - icon: auto_awesome
     title:
       en: "Automatic match generation"
@@ -85,8 +103,8 @@ features:
       en: "Public results portal"
       es: "Portal público de resultados"
     desc:
-      en: "Live, upcoming, group stage, results and bracket — everything players and fans follow with a single link, no account needed."
-      es: "En vivo, próximos, fase de grupos, resultados y cuadro — todo lo que jugadores y aficionados siguen con un solo enlace, sin crear cuenta."
+      en: "Live, upcoming, group stage, results and bracket — everything players and fans follow with a single link, no account needed. When a tournament ends, the portal shows the champion, runner-up, full bracket, group standings and match history."
+      es: "En vivo, próximos, fase de grupos, resultados y cuadro — todo lo que jugadores y aficionados siguen con un solo enlace, sin crear cuenta. Al terminar, el portal muestra campeón, subcampeón, el cuadro completo, las posiciones de los grupos y el historial de partidos."
     image: ../../assets/products/sinnet/10.png
 
 supportFeatures:
@@ -94,8 +112,8 @@ supportFeatures:
     es: "Perfiles e historial de jugadores"
   - en: "Payments overview"
     es: "Resumen de pagos"
-  - en: "Public club directory"
-    es: "Directorio público de clubes"
+  - en: "Public club directory with location"
+    es: "Directorio público de clubes con ubicación"
   - en: "One-tap WhatsApp contact"
     es: "Contacto por WhatsApp en un toque"
 
@@ -138,6 +156,12 @@ benefits:
       en: "With the manual work gone, you can run more tournaments and rankings with the same team."
       es: "Al quitarte el trabajo manual, organizas más torneos y rankings con el mismo equipo."
     highlight: { en: "More tournaments", es: "Más torneos" }
+  - icon: install_mobile
+    area: { en: "On the court", es: "En la cancha" }
+    benefit:
+      en: "Works great on phones and installs like an app — no app store needed. Players and staff use it courtside."
+      es: "Funciona perfecto en el celular y se instala como app — sin tienda de apps. Jugadores y staff la usan en la cancha."
+    highlight: { en: "Installable", es: "Instalable" }
 
 techNotes: []
 
@@ -169,6 +193,8 @@ faq:
     a: { en: "No. You run it from your phone, and we help you set up the first tournament.", es: "No. Se maneja desde el celular y nosotros te ayudamos a montar el primer torneo." }
   - q: { en: "How fast can I set up a tournament?", es: "¿Qué tan rápido puedo montar un torneo?" }
     a: { en: "In minutes: create the categories, the system builds the groups and you schedule the courts.", es: "En minutos: creas las categorías, el sistema arma los grupos y programas las canchas." }
+  - q: { en: "How do players register?", es: "¿Cómo se inscriben los jugadores?" }
+    a: { en: "From the registration form or via a magic link you share — it pins the tournament so they register in one tap.", es: "Desde el formulario o con un enlace mágico que compartes — fija el torneo para que se inscriban en un toque." }
 
 tags:
   - en: "Tennis tournaments"
@@ -181,6 +207,8 @@ tags:
     es: "Inscripciones y pagos"
   - en: "Made in Colombia"
     es: "Hecho en Colombia"
+  - en: "Mobile-first"
+    es: "Para el celular"
 
 brand:
   color: "#2E7D32"
