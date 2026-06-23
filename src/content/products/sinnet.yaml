@@ -169,6 +169,6 @@ brand:
 image: ../../assets/products/sinnet/hero.png
 
 ctas:
-  demoUrl: "mailto:defriction@defriction.org?subject=Quiero%20unir%20mi%20academia%20a%20Sinnet%20App"
+  demoUrl: "https://calendly.com/defriction-defriction/30min"
   liveUrl: "https://n8n.srv1153123.hstgr.cloud/tennis-admin/clubs"
   contactUrl: "mailto:defriction@defriction.org?subject=Quiero%20unir%20mi%20academia%20a%20Sinnet%20App"
