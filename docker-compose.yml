@@ -8,7 +8,17 @@ services:
     labels:
       - "traefik.enable=true"
 
-      # Dominio principal
+      # ── Ruta temporal para preview en el subdominio del VPS ──
+      - "traefik.http.routers.defriction-preview.rule=Host(`n8n.srv1153123.hstgr.cloud`) && PathPrefix(`/defriction`)"
+      - "traefik.http.routers.defriction-preview.entrypoints=websecure"
+      - "traefik.http.routers.defriction-preview.tls=true"
+      - "traefik.http.routers.defriction-preview.tls.certresolver=mytlschallenge"
+
+      # Middleware: Elimina '/defriction' de la URL antes de enviarla a Nginx
+      - "traefik.http.middlewares.defriction-strip.stripprefix.prefixes=/defriction"
+      - "traefik.http.routers.defriction-preview.middlewares=defriction-strip"
+
+      # ── Ruta del dominio final (activar cuando los DNS apunten al VPS) ──
       - "traefik.http.routers.defriction-landing.rule=Host(`defriction.org`) || Host(`www.defriction.org`)"
       - "traefik.http.routers.defriction-landing.entrypoints=websecure"
       - "traefik.http.routers.defriction-landing.tls=true"
