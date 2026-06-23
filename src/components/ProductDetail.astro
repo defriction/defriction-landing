@@ -176,6 +176,32 @@ const finalButtons =
     </section>
   )}
 
+  <!-- Pricing (soft band, no figures) -->
+  {data.pricing && (
+    <section class="mb-16">
+      <div class="bg-[var(--brand-soft)] border border-[var(--brand-soft)] rounded-2xl p-8 sm:p-10">
+        <h2 class="text-2xl font-bold text-text-main dark:text-white mb-6">{data.pricing.title[lang]}</h2>
+        <ul class="flex flex-col gap-3 mb-6">
+          {data.pricing.points.map((p) => (
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-[var(--brand)] shrink-0" aria-hidden="true">check_circle</span>
+              <span class="text-text-main dark:text-gray-200 font-medium">{p[lang]}</span>
+            </li>
+          ))}
+        </ul>
+        {data.pricing.note && (
+          <p class="text-sm text-text-muted dark:text-gray-400 mb-6">{data.pricing.note[lang]}</p>
+        )}
+        {isLink(ctas?.demoUrl) && (
+          <a href={ctas.demoUrl} target={ext(ctas.demoUrl) ? '_blank' : undefined} rel={ext(ctas.demoUrl) ? 'noopener noreferrer' : undefined}
+            class="inline-flex items-center justify-center px-6 py-3 text-base font-bold rounded-lg bg-[var(--brand)] hover:bg-[var(--brand-dark)] text-white transition-all shadow-md hover:shadow-lg">
+            {t.requestDemo}
+          </a>
+        )}
+      </div>
+    </section>
+  )}
+
   <!-- Support features -->
   {data.supportFeatures.length > 0 && (
     <section class="mb-16">
@@ -236,6 +262,24 @@ const finalButtons =
           </ul>
         </div>
       )}
+    </section>
+  )}
+
+  <!-- FAQ (no-JS accordion) -->
+  {data.faq.length > 0 && (
+    <section class="mb-16 max-w-3xl">
+      <h2 class="text-2xl font-bold text-text-main dark:text-white mb-6">{t.faqTitle}</h2>
+      <div>
+        {data.faq.map((item) => (
+          <details class="group border-b border-gray-100 dark:border-gray-800 py-4">
+            <summary class="flex justify-between items-center gap-4 cursor-pointer font-semibold text-text-main dark:text-white list-none">
+              {item.q[lang]}
+              <span class="material-symbols-outlined text-[var(--brand)] group-open:rotate-180 transition-transform shrink-0" aria-hidden="true">expand_more</span>
+            </summary>
+            <p class="mt-3 text-text-muted dark:text-gray-400 leading-relaxed">{item.a[lang]}</p>
+          </details>
+        ))}
+      </div>
     </section>
   )}
 

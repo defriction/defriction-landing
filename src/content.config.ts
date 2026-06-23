@@ -44,6 +44,15 @@ const products = defineCollection({
           })
         )
         .default([]),
+      // Soft pricing band (no figures): a few qualitative points + a note.
+      pricing: z
+        .object({
+          title: bilingual,
+          points: z.array(bilingual),
+          note: bilingual.optional(),
+        })
+        .optional(),
+      faq: z.array(z.object({ q: bilingual, a: bilingual })).default([]),
       techNotes: z.array(bilingual).default([]),
       honestScope: z.array(bilingual).default([]),
       tags: z.array(bilingual).default([]),

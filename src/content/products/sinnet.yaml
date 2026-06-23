@@ -149,6 +149,27 @@ honestScope:
   - en: "One-tap WhatsApp to coordinate schedules directly with your players."
     es: "WhatsApp en un toque para coordinar horarios directamente con tus jugadores."
 
+pricing:
+  title: { en: "Simple pricing", es: "Precios simples" }
+  points:
+    - { en: "No fixed cost: no setup fee, no monthly fee.", es: "Sin costo fijo: sin cuota de instalación ni mensualidad." }
+    - { en: "Your first tournament is free.", es: "Tu primer torneo es gratis." }
+  note: { en: "Tell us about your tournament and we'll set it up with you.", es: "Cuéntanos de tu torneo y lo armamos contigo." }
+
+faq:
+  - q: { en: "How much does it cost?", es: "¿Cuánto cuesta?" }
+    a: { en: "There's no fixed cost and your first tournament is free. After that we agree on something simple, tailored to your tournament.", es: "No hay costo fijo y tu primer torneo es gratis. Después acordamos algo simple y a la medida de tu torneo." }
+  - q: { en: "Do players and fans need to create an account?", es: "¿Los jugadores y aficionados necesitan crear una cuenta?" }
+    a: { en: "No. The public portal is open: anyone follows the tournament with a single link.", es: "No. El portal público es abierto: cualquiera sigue el torneo con un solo enlace." }
+  - q: { en: "How are registration payments handled?", es: "¿Cómo se manejan los pagos de inscripción?" }
+    a: { en: "Via Nequi, bank transfer or cash (COP). Sinnet records each payment and links its receipt, so you stay in full control.", es: "Por Nequi, transferencia bancaria o efectivo (COP). Sinnet registra cada pago y enlaza su comprobante, para que tengas control total." }
+  - q: { en: "Is it for leagues or only clubs?", es: "¿Sirve para ligas o solo para clubes?" }
+    a: { en: "For both: clubs, academies and leagues that organize tournaments.", es: "Para ambos: clubes, academias y ligas que organizan torneos." }
+  - q: { en: "Do I need technical skills?", es: "¿Necesito conocimientos técnicos?" }
+    a: { en: "No. You run it from your phone, and we help you set up the first tournament.", es: "No. Se maneja desde el celular y nosotros te ayudamos a montar el primer torneo." }
+  - q: { en: "How fast can I set up a tournament?", es: "¿Qué tan rápido puedo montar un torneo?" }
+    a: { en: "In minutes: create the categories, the system builds the groups and you schedule the courts.", es: "En minutos: creas las categorías, el sistema arma los grupos y programas las canchas." }
+
 tags:
   - en: "Tennis tournaments"
     es: "Torneos de tenis"
